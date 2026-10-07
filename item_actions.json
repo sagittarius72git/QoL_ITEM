@@ -1,0 +1,16 @@
+[
+  {
+    "type": "item_action",
+    "id": "RL_LOWER_ROPE_LADDER",
+    "name": {
+      "str": "Lower from a ledge"
+    }
+  },
+  {
+    "type": "item_action",
+    "id": "LGWD_SET_UP_DISPENSER",
+    "name": {
+      "str": "Set up the water dispenser"
+    }
+  }
+]

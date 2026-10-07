@@ -1,0 +1,201 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_rl_rope_ladder",
+    "name": "rope ladder",
+    "looks_like": "f_rope_up",
+    "description": "A rope ladder hanging down from the level above.  You can climb it up or down.  If it doesn't reach the ground, it dangles in the air: you can still hang on it, for example to climb in through a window, but step off and you will fall.  Pull it up from the ledge above, or take it down from here, to carry it with you.",
+    "symbol": "H",
+    "color": "brown",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "flags": [
+      "LADDER",
+      "TRANSPARENT",
+      "SEEN_FROM_ABOVE",
+      "REMOVE_FROM_ABOVE"
+    ],
+    "examine_action": "deployed_furniture",
+    "deployed_item": "rl_rope_ladder",
+    "bash": {
+      "str_min": 3,
+      "str_max": 40,
+      "sound": "smash!",
+      "sound_fail": "whump.",
+      "items": [
+        {
+          "item": "rope_30",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "2x4",
+          "count": [
+            2,
+            6
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_rl_rope_ladder_top",
+    "name": "rope ladder",
+    "looks_like": "f_rope_up",
+    "description": "The top end of a long rope ladder hanging down several levels.  Use > and < to climb along it, or climb back up onto the ledge from here.  Parts that don't reach the ground dangle in the air: you can hang on them, for example to climb in through a window, but step off and you will fall.  Pull it up from the ledge above, or take it down from here, to carry it with you.",
+    "symbol": "H",
+    "color": "brown",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "flags": [
+      "LADDER",
+      "GOES_DOWN",
+      "TRANSPARENT",
+      "SEEN_FROM_ABOVE",
+      "REMOVE_FROM_ABOVE"
+    ],
+    "examine_action": "deployed_furniture",
+    "deployed_item": "rl_rope_ladder",
+    "bash": {
+      "str_min": 3,
+      "str_max": 40,
+      "sound": "smash!",
+      "sound_fail": "whump.",
+      "items": [
+        {
+          "item": "rope_30",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "2x4",
+          "count": [
+            2,
+            6
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "name": "rope ladder",
+    "looks_like": "f_rope_up",
+    "symbol": "H",
+    "color": "brown",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "bash": {
+      "str_min": 3,
+      "str_max": 40,
+      "sound": "smash!",
+      "sound_fail": "whump."
+    },
+    "id": "f_rl_rope_ladder_mid",
+    "description": "Part of a long rope ladder hanging down from above.  Use > and < to climb along it.  To take it down, pull it up from the ledge at its top end.",
+    "flags": [
+      "GOES_UP",
+      "GOES_DOWN",
+      "TRANSPARENT",
+      "SEEN_FROM_ABOVE"
+    ]
+  },
+  {
+    "type": "furniture",
+    "name": "rope ladder",
+    "looks_like": "f_rope_up",
+    "symbol": "H",
+    "color": "brown",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "bash": {
+      "str_min": 3,
+      "str_max": 40,
+      "sound": "smash!",
+      "sound_fail": "whump."
+    },
+    "id": "f_rl_rope_ladder_bottom",
+    "description": "Part of a long rope ladder hanging down from above.  Use > and < to climb along it.  To take it down, pull it up from the ledge at its top end.",
+    "flags": [
+      "GOES_UP",
+      "TRANSPARENT",
+      "SEEN_FROM_ABOVE"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_rl_hanging_air",
+    "name": "open air",
+    "description": "Open air, with a rope ladder dangling in it.  You can hang on the ladder here, but step off it and you will fall.",
+    "symbol": " ",
+    "color": "i_cyan",
+    "looks_like": "t_open_air",
+    "move_cost": 2,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM"
+    ]
+  },
+  {
+    "type": "furniture",
+    "id": "f_lgwd_water_dispenser",
+    "name": "homemade water dispenser",
+    "looks_like": "f_water_purifier",
+    "description": "An upturned plastic jug on a rickety stand of scrap wood, held together with far too much duct tape.  A tube runs to a crooked spout, and it drips a little.  It fills itself with clean water from the fluid grid of the building it stands in.  Mark it as an Auto Drink zone and you will drink from it automatically during long activities.  Examine it to check the water or take it down.",
+    "symbol": "&",
+    "color": "light_blue",
+    "move_cost_mod": -1,
+    "coverage": 40,
+    "required_str": -1,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "SEALED",
+      "BLOCKSDOOR"
+    ],
+    "examine_action": "lua:LGWD_DISPENSER_EXAMINE",
+    "deconstruct": {
+      "items": [
+        {
+          "item": "lgwd_water_dispenser",
+          "count": 1
+        }
+      ]
+    },
+    "bash": {
+      "str_min": 4,
+      "str_max": 20,
+      "sound": "crunch!",
+      "sound_fail": "whump.",
+      "items": [
+        {
+          "item": "jug_plastic",
+          "prob": 30
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "makeshift_hose",
+          "prob": 50
+        }
+      ]
+    }
+  }
+]

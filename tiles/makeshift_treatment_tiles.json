@@ -1,0 +1,16 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [ "Custom Tileset", "UNDEAD_PEOPLE_BASE", "UNDEAD_PEOPLE", "MSX++DEAD_PEOPLE", "MshockXottoplus", "UltimateCataclysm", "Chibi_Ultica" ],
+    "tiles-new": [
+      {
+        "file": "tiles/makeshift_treatment.png",
+        "tiles": [ { "id": "mt_makeshift_treatment", "fg": 0, "rotates": false } ]
+      },
+      {
+        "file": "tiles/makeshift_disinfectant.png",
+        "tiles": [ { "id": "mt_makeshift_disinfectant", "fg": 0, "rotates": false } ]
+      }
+    ]
+  }
+]

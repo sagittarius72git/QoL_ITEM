@@ -1,0 +1,46 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Custom Tileset",
+      "UNDEAD_PEOPLE_BASE",
+      "UNDEAD_PEOPLE",
+      "MSX++DEAD_PEOPLE",
+      "MshockXottoplus",
+      "UltimateCataclysm",
+      "Chibi_Ultica"
+    ],
+    "tiles-new": [
+      {
+        "file": "tiles/rope_ladder.png",
+        "tiles": [
+          {
+            "id": "f_rl_rope_ladder",
+            "fg": 0,
+            "rotates": false
+          },
+          {
+            "id": "f_rl_rope_ladder_bottom",
+            "fg": 0,
+            "rotates": false
+          },
+          {
+            "id": "f_rl_rope_ladder_mid",
+            "fg": 0,
+            "rotates": false
+          },
+          {
+            "id": "f_rl_rope_ladder_top",
+            "fg": 0,
+            "rotates": false
+          },
+          {
+            "id": "rl_rope_ladder",
+            "fg": 1,
+            "rotates": false
+          }
+        ]
+      }
+    ]
+  }
+]

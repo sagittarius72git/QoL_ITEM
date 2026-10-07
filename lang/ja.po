@@ -1,0 +1,247 @@
+# Japanese translation for the "Rope Ladder" mod.
+# Assisted-by: Claude:claude-opus-5-5
+msgid ""
+msgstr ""
+"Project-Id-Version: qol_item\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: modinfo.json
+msgid "QoL Item"
+msgstr "QoL アイテム"
+
+#: modinfo.json
+msgid "A set of handy items: a rope ladder you can hang from a ledge, a homemade water dispenser that lets you auto-drink from the fluid grid, a makeshift bandage and disinfectant your companions can use any number of times, and a folding laser turret you can hook up to the electric grid."
+msgstr "便利なアイテムのセットです：段差の縁から垂らせる縄梯子、液体グリッドの水を自動飲料で飲めるようにする自作ウォーターサーバー、仲間が何度でも使える間に合せの包帯と消毒、電力グリッドにつなげる折りたたみレーザータレット。"
+
+msgid "Adds a craftable rope ladder.  Hang it down from a ledge or roof edge, or set it up against a wall from below, then climb one level up or down.  Pull it back up from above or take it down from below to carry it with you."
+msgstr "製作可能な縄梯子を追加する。段差や屋根の縁から垂らすか、下から壁際に掛けて、1階分を上り下りできる。上から引き上げるか下で片付ければ、また持ち運べる。"
+
+msgid "rope ladder"
+msgid_plural "rope ladders"
+msgstr[0] "縄梯子"
+
+msgid "Two long ropes with wooden rungs lashed between them, rolled up for carrying.  Use it to hang it down from a ledge or roof edge, or to set it up against a wall from below.  Hung from a ledge it reaches up to three levels down, dangling in the air if it doesn't reach the ground; set up from below it reaches one level up.  Pull it back up from above, or take it down at its top end."
+msgstr "2本の長いロープの間に木の踏み板を結び付け、持ち運べるよう丸めたもの。使用すると段差や屋根の縁から垂らすか、下から壁際に掛けることができる。縁から垂らせば3階分下まで届き、地面に届かなければ宙づりになる。下から掛ければ1階分上まで届く。上から引き上げるか、いちばん上の端で片付けて回収できる。"
+
+msgid "A rope ladder hanging down from the level above.  You can climb it up or down.  If it doesn't reach the ground, it dangles in the air: you can still hang on it, for example to climb in through a window, but step off and you will fall.  Pull it up from the ledge above, or take it down from here, to carry it with you."
+msgstr "上の階から垂らした縄梯子。これを使って上り下りできる。地面に届いていなければ宙づりになる。つかまったまま窓などから建物に入れるが、横に踏み出すと落ちる。上の階の縁から引き上げるか、ここで片付ければ持ち運べる。"
+
+msgid "Open air, with a rope ladder dangling in it.  You can hang on the ladder here, but step off it and you will fall."
+msgstr "空中に縄梯子がぶら下がっている。ここでは縄梯子につかまっていられるが、横に踏み出すと落ちる。"
+
+msgid "Lower it from a ledge"
+msgstr "縁から垂らす"
+
+msgid "Set it up here"
+msgstr "ここに設置する"
+
+msgid "Lower from a ledge"
+msgstr "縁から垂らす"
+
+msgid "Lower the rope ladder where?"
+msgstr "どこに縄梯子を垂らす？"
+
+msgid "There is no drop there.  To use it on level ground, choose \"Set it up here\" instead."
+msgstr "そこには段差がない。平らな場所で使うなら「ここに設置する」を選ぼう。"
+
+msgid "You can't hang it into deep water."
+msgstr "深い水の中には垂らせない。"
+
+msgid "There is no room to hang it there."
+msgstr "そこには垂らす場所がない。"
+
+msgid "You cannot do that while mounted."
+msgstr "騎乗中はできない。"
+
+msgid "You tie the rope ladder to the edge and let it down."
+msgstr "縄梯子を縁に結び付けて垂らした。"
+
+msgid "You tie the rope ladder to the edge and let it down.  It doesn't reach the ground and dangles in the air."
+msgstr "縄梯子を縁に結び付けて垂らした。地面には届かず、宙づりになっている。"
+
+# 本体の段差メニュー・回収メッセージ（公式訳が未整備のため補完。鉤縄にも効く）
+msgid "Pull up the %s."
+msgstr "%sを引き上げる"
+
+msgid "You pull up the %s."
+msgstr "%sを引き上げた。"
+
+msgid "You take down the %s."
+msgstr "%sを取り外した。"
+
+#: items.json furniture.json
+msgid "homemade water dispenser"
+msgid_plural "homemade water dispensers"
+msgstr[0] "自作ウォーターサーバー"
+
+#. ~ Description for {'str': 'homemade water dispenser'}
+#: items.json
+msgid "A plastic jug turned upside down on a rickety stand of scrap wood, held together with far too much duct tape.  A length of tubing runs from the jug to a crooked spout.  Set it up anywhere in a building with a fluid grid: it fills itself with clean water from the grid.  Mark it as an Auto Drink zone and you will drink from it automatically during long activities."
+msgstr "端材で組んだぐらつく台に、ポリタンクを逆さに載せてダクトテープを巻きまくったもの。タンクからチューブが曲がった注ぎ口まで伸びている。液体グリッドのある建物の中ならどこにでも設置でき、グリッドのきれいな水が自動で補充される。「自動飲料」区域に指定しておくと、長い作業の途中でのどが渇いたとき、ここから自動で水を飲む。"
+
+#. ~ Description for homemade water dispenser
+#: furniture.json
+msgid "An upturned plastic jug on a rickety stand of scrap wood, held together with far too much duct tape.  A tube runs to a crooked spout, and it drips a little.  It fills itself with clean water from the fluid grid of the building it stands in.  Mark it as an Auto Drink zone and you will drink from it automatically during long activities.  Examine it to check the water or take it down."
+msgstr "端材で組んだぐらつく台に、逆さのポリタンクをダクトテープでぐるぐる巻きにして固定してある。チューブの先の曲がった注ぎ口から、ときどき水がしたたっている。置いてある建物の液体グリッドからきれいな水が自動で補充される。「自動飲料」区域に指定しておくと、長い作業の途中でのどが渇いたとき、ここから自動で水を飲む。調べると水の量を確認したり、片付けたりできる。"
+
+#: items.json
+msgid "water dispenser reservoir"
+msgid_plural "water dispenser reservoirs"
+msgstr[0] "ウォーターサーバーの水"
+
+#. ~ Description for {'str': 'water dispenser reservoir'}
+#: items.json
+msgid "The water inside a homemade water dispenser.  You shouldn't be able to see this."
+msgstr "自作ウォーターサーバーの中の水。ふつうは見えないはずのものです。"
+
+#: main.lua
+msgid "Set up the water dispenser where?"
+msgstr "自作ウォーターサーバーをどこに設置しますか？"
+
+#: main.lua
+msgid "You can't put it on top of that.  Put it next to it instead."
+msgstr "その上には置けません。隣に設置してください。"
+
+#: main.lua
+msgid "You can't put it there."
+msgstr "そこには設置できません。"
+
+#: main.lua
+msgid "Something is in the way."
+msgstr "何かが邪魔になっています。"
+
+#: main.lua
+msgid "Clear the items off that spot first."
+msgstr "先にそのマスのアイテムをどけてください。"
+
+#: main.lua
+msgid "There is no sink, plumbed tank or other plumbing fixture next to that spot."
+msgstr "そのマスの隣に、流し台や配管接続したタンクなどの設備がありません。"
+
+#: main.lua
+msgid "Put it away first (it must not be wielded or worn)."
+msgstr "先に手から離して持ち物にしまってください（手に持ったり身に着けたりしていると設置できません）。"
+
+#: main.lua
+msgid "There is no clean water in the fluid grid right now.  The dispenser will be filled once there is some."
+msgstr "いまは液体グリッドにきれいな水がない。水が入りしだい、ウォーターサーバーに補充される。"
+
+#: main.lua
+msgid "You take down the water dispenser."
+msgstr "自作ウォーターサーバーを片付けた。"
+
+#: main.lua
+#, c-format
+msgid "It holds %d ml of clean water."
+msgstr "きれいな水が%dml入っている。"
+
+#: main.lua
+msgid "It has some clean water in it."
+msgstr "きれいな水が入っている。"
+
+#: main.lua
+msgid "It is empty."
+msgstr "空っぽだ。"
+
+#: main.lua
+msgid "There is no sink or plumbed tank next to it, so it won't be refilled."
+msgstr "隣に流し台や配管接続したタンクがないので、補充されない。"
+
+#: main.lua
+msgid "There is no clean water in the fluid grid."
+msgstr "この建物の液体グリッドに、きれいな水がない。"
+
+#: main.lua
+msgid "Homemade water dispenser"
+msgstr "自作ウォーターサーバー"
+
+#: main.lua
+msgid "Take it down"
+msgstr "片付ける"
+
+#: main.lua
+msgid "Leave it"
+msgstr "そのままにする"
+
+#: items.json
+msgid "reusable makeshift bandage"
+msgid_plural "reusable makeshift bandage"
+msgstr[0] "間に合せの包帯"
+
+#: items.json
+msgid "A grubby roll of reused rags, wrung out and wound up again after every use.  Give it to a companion: they can bandage themselves with it over and over, and it works about as well as a makeshift bandage.  It's far too filthy for you to bring yourself to use it."
+msgstr "使い回しの薄汚れたぼろ布の束。使うたびに絞って巻き直してある。仲間に渡すと、何度でもこれで自分に包帯を巻く。効き目は急造包帯と同じくらい。自分で使う気にはとてもなれないほど汚い。"
+
+#: items.json
+msgid "reusable makeshift antiseptic"
+msgid_plural "reusable makeshift antiseptic"
+msgstr[0] "間に合せの消毒"
+
+#: items.json
+msgid "A dented tin of questionable salve and a bottle of something that might once have been alcohol.  Give it to a companion: they can dab their bites with it over and over, though it doesn't do much good.  It's far too filthy for you to bring yourself to use it."
+msgstr "中身の怪しい軟膏が入ったへこんだ缶と、かつてはアルコールだったかもしれない何かの瓶。仲間に渡すと、何度でもこれでかみ傷を消毒するが、効き目はたいしたことがない。自分で使う気にはとてもなれないほど汚い。"
+
+msgid "The top end of a long rope ladder hanging down several levels.  Use > and < to climb along it, or climb back up onto the ledge from here.  Parts that don't reach the ground dangle in the air: you can hang on them, for example to climb in through a window, but step off and you will fall.  Pull it up from the ledge above, or take it down from here, to carry it with you."
+msgstr "何階分も垂れ下がった長い縄梯子の上の端。>と<で伝って上り下りでき、ここから縁の上へ戻れる。地面に届いていない部分は宙づりで、つかまったまま窓などから建物に入れるが、横に踏み出すと落ちる。上の階の縁から引き上げるか、ここで片付ければ持ち運べる。"
+
+msgid "Part of a long rope ladder hanging down from above.  Use > and < to climb along it.  To take it down, pull it up from the ledge at its top end."
+msgstr "上から垂れ下がった長い縄梯子の一部。>と<で伝って上り下りできる。回収するときは、上の端の縁から引き上げる。"
+
+msgid "It's too far down for the rope ladder."
+msgstr "縄梯子では下まで届かない。"
+
+msgid "It hangs %d levels down.  Use < and > to climb along it."
+msgstr "%d階分下まで垂れている。<と>で伝って上り下りできる。"
+
+msgid "Set up the water dispenser"
+msgstr "ウォーターサーバーを設置する"
+
+msgid "You set up the water dispenser.  Mark it as an Auto Drink zone to drink from it automatically."
+msgstr "自作ウォーターサーバーを設置した。「自動飲料」区域にすると、自動で飲むようになる。"
+
+#: vehicles.json
+msgid "Folding Laser Turret"
+msgstr "折りたたみレーザータレット"
+
+#: items.json
+msgid "A shoddy laser rifle on a rotating mount, bolted to a foldable frame with a small storage battery and a makeshift targeting unit.  Use it to unfold it where you stand.  Set the turret to automatic fire and it will shoot at enemies on its own, drawing power from its battery.  Connect it to a jumper cable connector with a jumper cable to run it from a building's electric grid.  Fold it up again from the vehicle menu to carry it."
+msgstr "粗悪なレーザーライフルを回転式の台に載せ、小型蓄電池と間に合わせの照準装置と一緒に折りたたみフレームへボルト留めしたもの。使うとその場に広げて設置する。タレットを自動射撃にすると、内蔵の蓄電池の電力で敵を勝手に撃つ。ジャンパーケーブルでジャンパーケーブル接続口とつなげば、建物の電力グリッドで動かせる。持ち運ぶときは車両メニューから折りたたむ。"
+
+#: items.json
+msgid "You unfold the %s and lock its legs in place."
+msgstr "%sを広げ、脚を固定した。"
+
+#: items.json
+msgid "A tangle of a camera, a tiny motor and salvaged circuit boards that can aim a turret on its own.  It is wired specifically for the folding laser turret and can't be installed anywhere else."
+msgstr "カメラと小型モーター、拾い集めた基板を寄せ集めた、タレットを自力で狙わせる装置。折りたたみレーザータレット専用の配線になっていて、ほかには取り付けられない。"
+
+#: vehicle_parts.json
+msgid "A makeshift targeting unit wired into the folding laser turret.  It lets the turret pick targets and fire on its own in automatic mode.  It can't be installed on other vehicles."
+msgstr "折りたたみレーザータレットに組み込まれた、間に合わせの照準装置。自動射撃モードでタレットが自分で目標を選んで撃てるようになる。ほかの車両には取り付けられない。"
+
+#: items.json
+msgid "folding laser turret"
+msgid_plural "folding laser turret"
+msgstr[0] "折りたたみレーザータレット"
+
+#: items.json vehicle_parts.json
+msgid "makeshift turret targeting unit"
+msgid_plural "makeshift turret targeting unit"
+msgstr[0] "間に合わせの照準装置"
+
+#~ msgid "Set it up next to a sink"
+#~ msgstr "流し台の隣に設置する"
+
+#~ msgid "Set up next to a sink"
+#~ msgstr "流し台の隣に設置する"
+
+#, c-format
+#~ msgid "You set up the water dispenser next to the %s.  Mark it as an Auto Drink zone to drink from it automatically."
+#~ msgstr "%sの隣に自作ウォーターサーバーを設置した。ここを「自動飲料」区域に指定すると、自動で水を飲むようになる。"
+
+#~ msgid "It's too far down.  The rope ladder only reaches one level."
+#~ msgstr "下まで遠すぎる。縄梯子は1階分しか届かない。"

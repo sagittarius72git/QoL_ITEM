@@ -1,0 +1,200 @@
+[
+  {
+    "id": "rl_rope_ladder",
+    "type": "GENERIC",
+    "category": "tools_entry",
+    "name": {
+      "str": "rope ladder"
+    },
+    "description": "Two long ropes with wooden rungs lashed between them, rolled up for carrying.  Use it to hang it down from a ledge or roof edge, or to set it up against a wall from below.  Hung from a ledge it reaches up to three levels down, dangling in the air if it doesn't reach the ground; set up from below it reaches one level up.  Pull it back up from above, or take it down at its top end.",
+    "weight": "7 kg",
+    "volume": "12 L",
+    "price": "40 USD",
+    "price_postapoc": "5 USD",
+    "to_hit": -3,
+    "bashing": 4,
+    "material": [
+      "cotton",
+      "wood"
+    ],
+    "symbol": "H",
+    "color": "brown",
+    "looks_like": "grapnel",
+    "flags": [
+      "ALLOWS_REMOTE_USE"
+    ],
+    "use_action": [
+      {
+        "type": "RL_LOWER_ROPE_LADDER",
+        "menu_text": "Lower it from a ledge"
+      },
+      {
+        "type": "deploy_furn",
+        "furn_type": "f_rl_rope_ladder",
+        "menu_text": "Set it up here"
+      }
+    ]
+  },
+  {
+    "id": "lgwd_water_dispenser",
+    "type": "GENERIC",
+    "category": "tools",
+    "name": {
+      "str": "homemade water dispenser"
+    },
+    "description": "A plastic jug turned upside down on a rickety stand of scrap wood, held together with far too much duct tape.  A length of tubing runs from the jug to a crooked spout.  Set it up anywhere in a building with a fluid grid: it fills itself with clean water from the grid.  Mark it as an Auto Drink zone and you will drink from it automatically during long activities.",
+    "weight": "1800 g",
+    "volume": "6 L",
+    "price": "5 USD",
+    "price_postapoc": "2 USD",
+    "to_hit": -2,
+    "bashing": 2,
+    "material": [
+      "plastic",
+      "wood"
+    ],
+    "symbol": "&",
+    "color": "light_blue",
+    "looks_like": "jug_plastic",
+    "use_action": [
+      {
+        "type": "LGWD_SET_UP_DISPENSER",
+        "menu_text": "Set up the water dispenser"
+      }
+    ]
+  },
+  {
+    "id": "lgwd_reservoir",
+    "type": "CONTAINER",
+    "category": "container",
+    "name": {
+      "str": "water dispenser reservoir"
+    },
+    "description": "The water inside a homemade water dispenser.  You shouldn't be able to see this.",
+    "weight": "10 g",
+    "volume": "1 L",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [
+      "plastic"
+    ],
+    "symbol": "~",
+    "color": "light_blue",
+    "looks_like": "jug_plastic",
+    "contains": "1 L",
+    "watertight": true,
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "mt_makeshift_treatment",
+    "type": "TOOL",
+    "category": "tools",
+    "name": {
+      "str_sp": "reusable makeshift bandage"
+    },
+    "description": "A grubby roll of reused rags, wrung out and wound up again after every use.  Give it to a companion: they can bandage themselves with it over and over, and it works about as well as a makeshift bandage.  It's far too filthy for you to bring yourself to use it.",
+    "weight": "250 g",
+    "volume": "500 ml",
+    "price": "0 cent",
+    "price_postapoc": "25 cent",
+    "to_hit": -1,
+    "material": [
+      "cotton"
+    ],
+    "symbol": "+",
+    "color": "white",
+    "looks_like": "bandages_makeshift",
+    "charges_per_use": 1,
+    "use_action": [
+      {
+        "type": "heal",
+        "bandages_power": 2,
+        "bleed": 0.75,
+        "move_cost": 300
+      }
+    ]
+  },
+  {
+    "id": "mt_makeshift_disinfectant",
+    "type": "TOOL",
+    "category": "tools",
+    "name": {
+      "str_sp": "reusable makeshift antiseptic"
+    },
+    "description": "A dented tin of questionable salve and a bottle of something that might once have been alcohol.  Give it to a companion: they can dab their bites with it over and over, though it doesn't do much good.  It's far too filthy for you to bring yourself to use it.",
+    "weight": "300 g",
+    "volume": "500 ml",
+    "price": "0 cent",
+    "price_postapoc": "25 cent",
+    "to_hit": -1,
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "symbol": "!",
+    "color": "brown",
+    "looks_like": "disinfectant_makeshift",
+    "charges_per_use": 1,
+    "use_action": [
+      {
+        "type": "heal",
+        "disinfectant_power": 1,
+        "bite": 0.3,
+        "move_cost": 200
+      }
+    ]
+  },
+  {
+    "id": "flt_folding_laser_turret",
+    "type": "TOOL",
+    "category": "deployables",
+    "name": {
+      "str": "folding laser turret"
+    },
+    "description": "A shoddy laser rifle on a rotating mount, bolted to a foldable frame with a small storage battery and a makeshift targeting unit.  Use it to unfold it where you stand.  Set the turret to automatic fire and it will shoot at enemies on its own, drawing power from its battery.  Connect it to a jumper cable connector with a jumper cable to run it from a building's electric grid.  Fold it up again from the vehicle menu to carry it.",
+    "weight": "25 kg",
+    "volume": "9 L",
+    "price": "800 USD",
+    "price_postapoc": "80 USD",
+    "to_hit": -4,
+    "bashing": 6,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "T",
+    "color": "magenta",
+    "looks_like": "laser_rifle_cheap",
+    "use_action": {
+      "type": "unfold_vehicle",
+      "vehicle_name": "flt_folding_laser_turret",
+      "unfold_msg": "You unfold the %s and lock its legs in place.",
+      "moves": 500
+    },
+    "flags": [
+      "ALLOWS_REMOTE_USE"
+    ]
+  },
+  {
+    "id": "flt_turret_brain",
+    "type": "GENERIC",
+    "category": "veh_parts",
+    "name": {
+      "str": "makeshift turret targeting unit"
+    },
+    "description": "A tangle of a camera, a tiny motor and salvaged circuit boards that can aim a turret on its own.  It is wired specifically for the folding laser turret and can't be installed anywhere else.",
+    "weight": "1 kg",
+    "volume": "750 ml",
+    "price": "100 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": ",",
+    "color": "yellow",
+    "looks_like": "turret_controls"
+  }
+]

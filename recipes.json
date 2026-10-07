@@ -1,0 +1,277 @@
+[
+  {
+    "type": "recipe",
+    "result": "rl_rope_ladder",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 2,
+    "time": "30 m",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "rope_natural",
+          4,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "2x4",
+          8
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "lgwd_water_dispenser",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_CONTAINERS",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "20 m",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "jug_plastic",
+          1
+        ],
+        [
+          "bottle_plastic",
+          4
+        ],
+        [
+          "canteen",
+          1
+        ]
+      ],
+      [
+        [
+          "hose",
+          1
+        ],
+        [
+          "makeshift_hose",
+          1
+        ]
+      ],
+      [
+        [
+          "2x4",
+          2
+        ],
+        [
+          "stick",
+          4
+        ]
+      ],
+      [
+        [
+          "duct_tape",
+          20
+        ],
+        [
+          "string_36",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "mt_makeshift_treatment",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MEDICAL",
+    "skill_used": "firstaid",
+    "difficulty": 1,
+    "time": "10 m",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "rag",
+          6
+        ],
+        [
+          "rag_bloody",
+          6
+        ]
+      ],
+      [
+        [
+          "string_6",
+          2
+        ],
+        [
+          "duct_tape",
+          10
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "mt_makeshift_disinfectant",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MEDICAL",
+    "skill_used": "firstaid",
+    "difficulty": 1,
+    "time": "5 m",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "can_food",
+          1
+        ],
+        [
+          "can_food_unsealed",
+          1
+        ],
+        [
+          "can_medium",
+          1
+        ],
+        [
+          "can_medium_unsealed",
+          1
+        ],
+        [
+          "bottle_glass",
+          1
+        ]
+      ],
+      [
+        [
+          "rag",
+          1
+        ],
+        [
+          "rag_bloody",
+          1
+        ]
+      ],
+      [
+        [
+          "disinfectant",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "flt_folding_laser_turret",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "electronics",
+    "difficulty": 5,
+    "time": "2 h",
+    "autolearn": true,
+    "book_learn": [
+      [
+        "advanced_electronics",
+        3
+      ],
+      [
+        "textbook_electronics",
+        3
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      },
+      {
+        "id": "WRENCH",
+        "level": 1
+      },
+      {
+        "id": "SAW_M",
+        "level": 1
+      }
+    ],
+    "using": [
+      [
+        "soldering_standard",
+        30
+      ]
+    ],
+    "components": [
+      [
+        [
+          "laser_rifle_cheap",
+          1
+        ]
+      ],
+      [
+        [
+          "small_storage_battery",
+          1
+        ]
+      ],
+      [
+        [
+          "pipe",
+          7
+        ]
+      ],
+      [
+        [
+          "motor_tiny",
+          2
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ],
+      [
+        [
+          "camera",
+          1
+        ],
+        [
+          "camera_pro",
+          1
+        ],
+        [
+          "omnicamera",
+          1
+        ]
+      ],
+      [
+        [
+          "e_scrap",
+          5
+        ]
+      ],
+      [
+        [
+          "cable",
+          30
+        ]
+      ]
+    ]
+  }
+]
