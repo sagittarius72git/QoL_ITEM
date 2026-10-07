@@ -76,6 +76,10 @@ mod.cfg = {
   -- (Allow dangling when it doesn't reach the ground.)
   allow_hanging = true,
 
+  -- 「向こう側へ渡す」で届く距離（向こう側の地面まで、何マス先か）
+  -- (How far "Throw it across a gap" reaches: tiles to the ground on the other side.)
+  bridge_max_dist = 3,
+
   -- 詳細をデバッグログに出す
   debug = false,
 }
@@ -395,6 +399,211 @@ mod.lower_rope_ladder = function(params)
     return 0
   end
   return res or 0
+end
+
+----------------------------------------------------------------------
+-- 向こう側へ渡す（同じ高さの離れた足場へ投げ掛けて、橋にする）
+-- (Throw it across a gap: hook it onto ground a few tiles away at the
+--  same level and cross it like a bridge.)
+----------------------------------------------------------------------
+
+--[[
+  方向を選ぶと、その先へ1マスずつ調べる。
+    * 途中のマスはすべて空中（宙づりにしてよい空中）で、何もないこと
+    * 最初に見つかった地面のマスが「向こう側」。mod.cfg.bridge_max_dist マス以内にあること
+  空中のマスは、足場の地形（t_rl_bridge_air）にしてから家具 f_rl_rope_bridge を置く。
+  家具を調べると「取り外す」で全部外れ、縄梯子1つに戻る。
+  どれか1マスでも壊されたら、毎ターンの見回りで全部外して空中に戻す（上にいる人は落ちる）。
+
+  記録（セーブに残る）: storage.rl_bridges[キー] = { tiles = { { x, y, z, ter = 元の地形 }, ... } }
+]]
+
+local BRIDGE_FURN = "f_rl_rope_bridge"
+local BRIDGE_TER = "t_rl_bridge_air"
+
+local function bridge_list()
+  storage.rl_bridges = storage.rl_bridges or {}
+  return storage.rl_bridges
+end
+
+-- 橋を全部外す（家具を消し、足場を元の空中に戻す）
+-- (Remove the whole bridge and restore the open air.)
+local function remove_bridge(map, rec)
+  for _, t in ipairs(rec.tiles or {}) do
+    local p = map:abs_to_bub(TripointAbsMs.new(t.x, t.y, t.z))
+    if in_bounds(map, p) then
+      if furn_str_at(map, p) == BRIDGE_FURN then
+        set_furn(map, p, "f_null")
+      end
+      if t.ter and ter_str_at(map, p) == BRIDGE_TER then
+        set_ter(map, p, t.ter)
+      end
+    end
+  end
+end
+
+-- 指定のマスを含む橋の記録を探す
+-- (Find the bridge record that contains the given tile.)
+local function find_bridge(map, p)
+  local a = map:bub_to_abs(p)
+  for k, rec in pairs(bridge_list()) do
+    for _, t in ipairs(rec.tiles or {}) do
+      if t.x == a.x and t.y == a.y and t.z == a.z then
+        return k, rec
+      end
+    end
+  end
+  return nil, nil
+end
+
+local function bridge(params)
+  local u = params.user
+  if not u then
+    return 0
+  end
+  if u:is_mounted() then
+    msg(locale.gettext("You cannot do that while mounted."))
+    return 0
+  end
+
+  local dir = gapi.choose_direction(locale.gettext("Throw the rope ladder across which way?"), false)
+  if not dir or (dir.x == 0 and dir.y == 0) then
+    return 0
+  end
+
+  local map = gapi.get_map()
+  local here = u:get_pos_ms()
+  local span = {}
+  local landing = nil
+  for k = 1, math.max(2, mod.cfg.bridge_max_dist) do
+    local p = TripointBubMs.new(here.x + dir.x * k, here.y + dir.y * k, here.z)
+    if not in_bounds(map, p) then break end
+    if map:has_ter_flag_at("NO_FLOOR", p) then
+      -- 空中：渡す区間。何もないただの空中だけ
+      -- (Open air: part of the span. Only plain, empty air.)
+      local furn = furn_str_at(map, p)
+      if not AIR_TERS[ter_str_at(map, p) or ""]
+          or furn == nil or (furn ~= "f_null" and furn ~= "")
+          or gapi.get_creature_at(p) then
+        msg(locale.gettext("Something is in the way."))
+        return 0
+      end
+      span[#span + 1] = p
+    else
+      landing = p
+      break
+    end
+  end
+
+  if #span == 0 then
+    msg(locale.gettext("There is no gap to cross there."))
+    return 0
+  end
+  if not landing then
+    msg(locale.gettext("The other side is too far for the rope ladder."))
+    return 0
+  end
+  -- 向こう側が壁や深い水では掛けられない
+  -- (Can't hook it onto a wall or deep water.)
+  if map:has_ter_flag_at("WALL", landing) or map:has_ter_flag_at("DEEP_WATER", landing) then
+    msg(locale.gettext("There is nothing to hook it onto on the other side."))
+    return 0
+  end
+
+  -- 空中のマスを足場にしてから家具を置く。駄目なら全部元に戻す
+  -- (Swap in the bridge terrain, then place the furniture; undo everything on failure.)
+  local tiles = {}
+  for _, p in ipairs(span) do
+    local a = map:bub_to_abs(p)
+    local t = { x = a.x, y = a.y, z = a.z, ter = ter_str_at(map, p) }
+    tiles[#tiles + 1] = t
+    set_ter(map, p, BRIDGE_TER)
+    set_furn(map, p, BRIDGE_FURN)
+    if furn_str_at(map, p) ~= BRIDGE_FURN then
+      remove_bridge(map, { tiles = tiles })
+      msg(locale.gettext("Something is in the way."))
+      log("bridge: set_furn_at did not take effect")
+      return 0
+    end
+  end
+  bridge_list()[key_of(tiles[1])] = { tiles = tiles }
+
+  u:mod_moves(-mod.cfg.move_cost * #span)
+  msg(locale.gettext("You throw the rope ladder across the gap and hook it onto the other side."))
+  log("bridge: %d tiles toward %d,%d", #span, dir.x, dir.y)
+  return 1
+end
+
+mod.bridge_rope_ladder = function(params)
+  local ok, res = pcall(bridge, params)
+  if not ok then
+    gdebug.log_info("RL: bridge_rope_ladder failed: " .. tostring(res))
+    return 0
+  end
+  return res or 0
+end
+
+-- 橋を調べる：「取り外す」で全部外し、縄梯子を足元に戻す
+-- (Examine the bridge: take it all down and drop the ladder at your feet.)
+mod.examine_bridge = function(params)
+  local ok, err = pcall(function()
+    local u = params.user
+    local p = params.pos
+    if not u or not p then return end
+    local map = gapi.get_map()
+    local ui = UiList.new()
+    ui:title(locale.gettext("Rope ladder across the gap"))
+    ui:add(1, locale.gettext("Take it down"))
+    ui:add(2, locale.gettext("Leave it"))
+    if ui:query() ~= 1 then return end
+
+    local k, rec = find_bridge(map, p)
+    if rec then
+      remove_bridge(map, rec)
+      bridge_list()[k] = nil
+    else
+      -- 記録が無い（古い状態など）：このマスだけ外す
+      -- (No record: just remove this tile.)
+      set_furn(map, p, "f_null")
+      if ter_str_at(map, p) == BRIDGE_TER then set_ter(map, p, "t_open_air") end
+    end
+    map:create_item_at(u:get_pos_ms(), ItypeId.new("rl_rope_ladder"), 1)
+    u:mod_moves(-mod.cfg.move_cost)
+    msg(locale.gettext("You pull the rope ladder back."))
+  end)
+  if not ok then
+    gdebug.log_info("RL: examine_bridge failed: " .. tostring(err))
+  end
+end
+
+-- 毎ターンの見回り：どこか1マスでも壊されていたら、全部外して空中に戻す
+-- (Patrol: if any tile was destroyed, take the whole bridge down.)
+mod.check_bridges = function()
+  local ok, err = pcall(function()
+    local list = bridge_list()
+    if next(list) == nil then return end
+    local map = gapi.get_map()
+    for k, rec in pairs(list) do
+      local loaded, broken = true, false
+      for _, t in ipairs(rec.tiles or {}) do
+        local p = map:abs_to_bub(TripointAbsMs.new(t.x, t.y, t.z))
+        if not in_bounds(map, p) then
+          loaded = false
+        elseif furn_str_at(map, p) ~= BRIDGE_FURN then
+          broken = true
+        end
+      end
+      -- 読み込まれていない場所は、近づいたときに調べる
+      if loaded and broken then
+        remove_bridge(map, rec)
+        list[k] = nil
+        log("bridge %s broken", k)
+      end
+    end
+  end)
+  if not ok then
+    gdebug.log_info("RL: check_bridges failed: " .. tostring(err))
+  end
 end
 
 --[[

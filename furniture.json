@@ -197,5 +197,49 @@
         }
       ]
     }
+  },
+  {
+    "type": "furniture",
+    "id": "f_rl_rope_bridge",
+    "name": "rope ladder",
+    "looks_like": "f_rope_up",
+    "description": "A rope ladder stretched across the gap and hooked onto the ground on the other side.  You can crawl along it to cross, but step off it and you will fall.  Examine it to take it down.",
+    "symbol": "=",
+    "color": "brown",
+    "move_cost_mod": 2,
+    "required_str": -1,
+    "flags": [
+      "TRANSPARENT"
+    ],
+    "examine_action": "lua:RL_BRIDGE_EXAMINE",
+    "bash": {
+      "str_min": 3,
+      "str_max": 40,
+      "sound": "smash!",
+      "sound_fail": "whump.",
+      "items": [
+        {
+          "item": "2x4",
+          "count": [
+            0,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_rl_bridge_air",
+    "name": "open air",
+    "description": "Open air, with a rope ladder stretched across it.  You can crawl along the ladder here, but step off it and you will fall.",
+    "symbol": " ",
+    "color": "i_cyan",
+    "looks_like": "t_open_air",
+    "move_cost": 2,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM"
+    ]
   }
 ]

@@ -16,10 +16,11 @@ A mod that bundles a few handy items.
 Crafting menu: Other → Tools (Fabrication 2, 30 minutes, cutting 1).
 Materials: 2 ropes' worth of rope (long rope, makeshift rope, vine or plastic rope; ×10 for short ones), 8 2x4s
 
-Use it (`a`) and choose one of two options.
+Use it (`a`) and choose one of three options.
 
 - **Lower it from a ledge** … pick an adjacent ledge and it hangs straight down from there, **up to 3 levels** (for climbing down from a roof or cliff).
 - **Set it up here** … hang it on an adjacent tile at the same level (for climbing up one level from below, just like a grappling hook). If that tile has no ground, you throw it up onto the edge above and it dangles there.
+- **Throw it across a gap** … throw it onto ground farther away at the same level to make a bridge (see below).
 
 Climbing and retrieving work the same as the game's grappling hook. Examine the ledge on the upper level to "Pull up", or examine the topmost tile of the rope ladder to "Take it down".
 It can't be hung into deep water or onto walls, furniture or people (if one is on a level partway down, it stops just above it).
@@ -31,6 +32,12 @@ It can't be hung into deep water or onto walls, furniture or people (if one is o
 - Stepping sideways off a rope ladder tile into the air makes you fall.
 - Retrieving it takes the whole thing down from the top (it turns back into one rope ladder). If a section partway down is destroyed, everything below it falls.
 - **Retrieve any rope ladder that hangs two or more levels or is dangling before you remove this mod.**
+### Throw it across a gap
+
+- Use it, choose "Throw it across a gap" and pick a direction. You throw it onto the ground on the other side, **up to 3 tiles away** at the same level, and hook it there. The ladder spans the open air in between, and you can cross it like a bridge.
+- It only works when every tile in between is empty open air and there is ground beyond it (not a wall or deep water).
+- Examine the ladder to "Take it down" (it comes back to your feet). If any tile of it is destroyed, the whole thing comes down.
+- **Retrieve any ladder thrown across a gap before you remove this mod.**
 
 ## Homemade water dispenser
 
@@ -89,5 +96,5 @@ Materials: 1 shoddy laser rifle, 1 small storage battery, 7 pipes, 2 tiny electr
 
 You can change these in `main.lua`.
 
-- Rope ladder: `mod.cfg.max_levels` (maximum number of levels it can hang from a ledge), `mod.cfg.move_cost` (time it takes to lower one level), `mod.cfg.allow_hanging` (whether it can dangle)
+- Rope ladder: `mod.cfg.max_levels` (maximum number of levels it can hang from a ledge), `mod.cfg.move_cost` (time it takes to lower one level), `mod.cfg.allow_hanging` (whether it can dangle), `mod.cfg.bridge_max_dist` (how far it can be thrown across a gap)
 - Homemade water dispenser: `CFG.need_fixture` (`true` restores the old rule that it can only be placed next to a sink or the like), `CFG.fixtures` (sinks and other fixtures), `CFG.refill_charges` (amount per refill)

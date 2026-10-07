@@ -24,8 +24,8 @@ msgid "rope ladder"
 msgid_plural "rope ladders"
 msgstr[0] "縄梯子"
 
-msgid "Two long ropes with wooden rungs lashed between them, rolled up for carrying.  Use it to hang it down from a ledge or roof edge, or to set it up against a wall from below.  Hung from a ledge it reaches up to three levels down, dangling in the air if it doesn't reach the ground; set up from below it reaches one level up, dangling if there is no ground there.  Pull it back up from above, or take it down from below."
-msgstr "2本の長いロープの間に木の踏み板を結び付け、持ち運べるよう丸めたもの。使用すると段差や屋根の縁から垂らすか、下から壁際に掛けることができる。縁から垂らせば3階分下まで届き、地面に届かなければ宙づりになる。下から掛ければ1階分上まで届き、地面がなければ宙づりになる。上から引き上げるか、下で片付けて回収できる。"
+msgid "Two long ropes with wooden rungs lashed between them, rolled up for carrying.  Use it to hang it down from a ledge or roof edge, or to set it up against a wall from below.  Hung from a ledge it reaches up to three levels down, dangling in the air if it doesn't reach the ground; set up from below it reaches one level up, dangling if there is no ground there.  It can also be thrown across a gap onto the ground up to three tiles away and crossed like a bridge.  Pull it back up from above, or take it down from below."
+msgstr "2本の長いロープの間に木の踏み板を結び付け、持ち運べるよう丸めたもの。使用すると段差や屋根の縁から垂らすか、下から壁際に掛けることができる。縁から垂らせば3階分下まで届き、地面に届かなければ宙づりになる。下から掛ければ1階分上まで届き、地面がなければ宙づりになる。離れた足場へ投げ渡して、橋のように渡ることもできる（3マス先まで）。上から引き上げるか、下で片付けて回収できる。"
 
 msgid "A rope ladder hanging down from the level above.  You can climb it up or down.  If it doesn't reach the ground, it dangles in the air: you can still hang on it, for example to climb in through a window, but step off and you will fall.  Pull it up from the ledge above, or take it down from here, to carry it with you."
 msgstr "上の階から垂らした縄梯子。これを使って上り下りできる。地面に届いていなければ宙づりになる。つかまったまま窓などから建物に入れるが、横に踏み出すと落ちる。上の階の縁から引き上げるか、ここで片付ければ持ち運べる。"
@@ -208,6 +208,39 @@ msgstr "縄梯子を設置した。"
 
 msgid "You throw the rope ladder up and hook it onto the edge above.  It dangles in the air."
 msgstr "縄梯子を投げ上げて、上の縁に引っ掛けた。宙づりになっている。"
+
+msgid "Throw it across a gap"
+msgstr "向こう側へ渡す"
+
+msgid "Throw across a gap"
+msgstr "向こう側へ渡す"
+
+msgid "Throw the rope ladder across which way?"
+msgstr "どちらへ縄梯子を渡しますか？"
+
+msgid "There is no gap to cross there."
+msgstr "そこには渡るような隙間がない。"
+
+msgid "The other side is too far for the rope ladder."
+msgstr "向こう側が遠すぎて、縄梯子が届かない。"
+
+msgid "There is nothing to hook it onto on the other side."
+msgstr "向こう側に引っ掛けられる足場がない。"
+
+msgid "You throw the rope ladder across the gap and hook it onto the other side."
+msgstr "縄梯子を向こう側へ投げ渡して、引っ掛けた。"
+
+msgid "Rope ladder across the gap"
+msgstr "渡した縄梯子"
+
+msgid "You pull the rope ladder back."
+msgstr "縄梯子を手元に引き戻した。"
+
+msgid "A rope ladder stretched across the gap and hooked onto the ground on the other side.  You can crawl along it to cross, but step off it and you will fall.  Examine it to take it down."
+msgstr "隙間に渡して、向こう側の足場に引っ掛けた縄梯子。這って伝えば渡れるが、横に踏み出すと落ちる。調べると取り外せる。"
+
+msgid "Open air, with a rope ladder stretched across it.  You can crawl along the ladder here, but step off it and you will fall."
+msgstr "空中に縄梯子が渡してある。縄梯子を伝って這い進めるが、横に踏み出すと落ちる。"
 
 msgid "Set up the water dispenser"
 msgstr "ウォーターサーバーを設置する"

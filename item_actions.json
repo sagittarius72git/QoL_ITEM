@@ -15,6 +15,13 @@
   },
   {
     "type": "item_action",
+    "id": "RL_BRIDGE_ROPE_LADDER",
+    "name": {
+      "str": "Throw across a gap"
+    }
+  },
+  {
+    "type": "item_action",
     "id": "LGWD_SET_UP_DISPENSER",
     "name": {
       "str": "Set up the water dispenser"

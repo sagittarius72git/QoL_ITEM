@@ -30,10 +30,29 @@ game.iuse_functions["RL_SET_UP_ROPE_LADDER"] = {
   end,
 }
 
+-- 縄梯子：「向こう側へ渡す」と、渡した縄梯子を調べる
+-- (Rope ladder: throw it across a gap, and examine the bridge.)
+game.iuse_functions["RL_BRIDGE_ROPE_LADDER"] = {
+  use = function(params)
+    if mod.bridge_rope_ladder then
+      return mod.bridge_rope_ladder(params)
+    end
+    return 0
+  end,
+}
+game.examine_functions["RL_BRIDGE_EXAMINE"] = function(params)
+  if mod.examine_bridge then
+    mod.examine_bridge(params)
+  end
+end
+
 -- 縄梯子：宙づりの縄梯子が回収・破壊されたら、足場を空中に戻す（毎ターン。記録がなければすぐ戻る）
 gapi.add_on_every_x_hook(TimeDuration.from_turns(1), function()
   if mod.check_hanging_ladders then
     mod.check_hanging_ladders()
+  end
+  if mod.check_bridges then
+    mod.check_bridges()
   end
 end)
 
