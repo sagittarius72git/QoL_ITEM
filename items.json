@@ -6,7 +6,7 @@
     "name": {
       "str": "rope ladder"
     },
-    "description": "Two long ropes with wooden rungs lashed between them, rolled up for carrying.  Use it to hang it down from a ledge or roof edge, or to set it up against a wall from below.  Hung from a ledge it reaches up to three levels down, dangling in the air if it doesn't reach the ground; set up from below it reaches one level up.  Pull it back up from above, or take it down at its top end.",
+    "description": "Two long ropes with wooden rungs lashed between them, rolled up for carrying.  Use it to hang it down one level from a ledge or roof edge, or to set it up against a wall from below to climb one level up.  Pull it back up from above, or take it down from below.",
     "weight": "7 kg",
     "volume": "12 L",
     "price": "40 USD",

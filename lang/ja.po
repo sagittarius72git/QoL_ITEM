@@ -24,11 +24,11 @@ msgid "rope ladder"
 msgid_plural "rope ladders"
 msgstr[0] "縄梯子"
 
-msgid "Two long ropes with wooden rungs lashed between them, rolled up for carrying.  Use it to hang it down from a ledge or roof edge, or to set it up against a wall from below.  Hung from a ledge it reaches up to three levels down, dangling in the air if it doesn't reach the ground; set up from below it reaches one level up.  Pull it back up from above, or take it down at its top end."
-msgstr "2本の長いロープの間に木の踏み板を結び付け、持ち運べるよう丸めたもの。使用すると段差や屋根の縁から垂らすか、下から壁際に掛けることができる。縁から垂らせば3階分下まで届き、地面に届かなければ宙づりになる。下から掛ければ1階分上まで届く。上から引き上げるか、いちばん上の端で片付けて回収できる。"
+msgid "Two long ropes with wooden rungs lashed between them, rolled up for carrying.  Use it to hang it down one level from a ledge or roof edge, or to set it up against a wall from below to climb one level up.  Pull it back up from above, or take it down from below."
+msgstr "2本の長いロープの間に木の踏み板を結び付け、持ち運べるよう丸めたもの。使用すると段差や屋根の縁から1階分下へ垂らすか、下から壁際に掛けて1階分上へ登れるようにできる。上から引き上げるか、下で片付けて回収できる。"
 
-msgid "A rope ladder hanging down from the level above.  You can climb it up or down.  If it doesn't reach the ground, it dangles in the air: you can still hang on it, for example to climb in through a window, but step off and you will fall.  Pull it up from the ledge above, or take it down from here, to carry it with you."
-msgstr "上の階から垂らした縄梯子。これを使って上り下りできる。地面に届いていなければ宙づりになる。つかまったまま窓などから建物に入れるが、横に踏み出すと落ちる。上の階の縁から引き上げるか、ここで片付ければ持ち運べる。"
+msgid "A rope ladder hanging down from the level above.  You can climb it up or down.  Pull it up from the ledge above, or take it down from here, to carry it with you."
+msgstr "上の階から垂らした縄梯子。これを使って上り下りできる。上の階の縁から引き上げるか、ここで片付ければ持ち運べる。"
 
 msgid "Open air, with a rope ladder dangling in it.  You can hang on the ladder here, but step off it and you will fall."
 msgstr "空中に縄梯子がぶら下がっている。ここでは縄梯子につかまっていられるが、横に踏み出すと落ちる。"
