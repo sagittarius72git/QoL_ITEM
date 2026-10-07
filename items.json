@@ -1,7 +1,7 @@
 [
   {
     "id": "rl_rope_ladder",
-    "type": "GENERIC",
+    "type": "TOOL",
     "category": "tools_entry",
     "name": {
       "str": "rope ladder"
@@ -21,7 +21,8 @@
     "color": "brown",
     "looks_like": "grapnel",
     "flags": [
-      "ALLOWS_REMOTE_USE"
+      "ALLOWS_REMOTE_USE",
+      "DESTROY_ON_DECHARGE"
     ],
     "use_action": [
       {
@@ -29,8 +30,7 @@
         "menu_text": "Lower it from a ledge"
       },
       {
-        "type": "deploy_furn",
-        "furn_type": "f_rl_rope_ladder",
+        "type": "RL_SET_UP_ROPE_LADDER",
         "menu_text": "Set it up here"
       }
     ]

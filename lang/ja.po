@@ -197,6 +197,18 @@ msgstr "縄梯子では下まで届かない。"
 msgid "It hangs %d levels down.  Use < and > to climb along it."
 msgstr "%d階分下まで垂れている。<と>で伝って上り下りできる。"
 
+msgid "Set up the rope ladder"
+msgstr "縄梯子を設置する"
+
+msgid "Set up the rope ladder where?"
+msgstr "どこに縄梯子を設置しますか？"
+
+msgid "You set up the rope ladder."
+msgstr "縄梯子を設置した。"
+
+msgid "You throw the rope ladder up and hook it onto the edge above.  It dangles in the air."
+msgstr "縄梯子を投げ上げて、上の縁に引っ掛けた。宙づりになっている。"
+
 msgid "Set up the water dispenser"
 msgstr "ウォーターサーバーを設置する"
 

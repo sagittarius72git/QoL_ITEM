@@ -29,7 +29,11 @@ do
       - LADDER            … このマスから上の階へ登れる／上の階からこのマスへ降りられる
       - REMOVE_FROM_ABOVE … 上の階で縁を調べると「引き上げる」で回収できる
       - deployed_furniture … このマスで調べると「片付ける」で回収できる
-    * 「ここに設置する」は本体の deploy_furn（自分と同じ高さの隣のマス。1階分）
+    * 「ここに設置する」… 自分と同じ高さの隣のマスに掛ける（下から1階分登るとき）。
+      本体の deploy_furn と同じ置き方だが、そのマスが空中なら宙づりで掛ける
+      （上の縁に投げて引っ掛けるイメージ。deploy_furn だと家具が下へ落ちて壊れる）。
+      (Set it up on an adjacent tile at your level; if that tile is open air,
+       it hangs there instead of falling like deploy_furn would.)
 
   このファイルが足すもの:
     * 「縁から垂らす」… 隣の床のないマス（段差の縁）を選ぶと、その真下に縄梯子を掛ける。
@@ -46,8 +50,8 @@ do
       それより下の区間を外し、足場を元の空中に戻す（回収で手に入る縄梯子は1つ）。
 
   使用アクションの戻り値は「消費数」。1 を返すとアイテムが取り除かれる。
-  （アイテムが deploy_furn も持っているので、本体が「設置可能なアイテム」として扱い、
-   使用後に自動で取り除く）
+  （アイテムは TOOL で DESTROY_ON_DECHARGE を持つので、本体が使用後に自動で取り除く）
+  (The item is a TOOL with DESTROY_ON_DECHARGE, so returning 1 removes it.)
   失敗時は必ず 0 を返し、アイテムを失わないようにしている。
 ]]
 
@@ -304,6 +308,86 @@ local function lower(params)
   end
   log("lowered %d levels at %d,%d (hanging=%s)", n, target.x, target.y, tostring(bottom_hanging))
   return 1
+end
+
+--[[
+  「ここに設置する」：自分と同じ高さの隣のマスに縄梯子を掛ける（下から1階分登るとき）。
+  (Set it up on an adjacent tile at your own level, to climb one level up.)
+  地面があればそのまま置く。空中なら足場の地形にしてから置き、宙づりとして見回りに記録する。
+  (On open air, swap in the hanging terrain first so it doesn't fall, and record it.)
+]]
+local function set_up(params)
+  local u = params.user
+  if not u then
+    return 0
+  end
+  if u:is_mounted() then
+    msg(locale.gettext("You cannot do that while mounted."))
+    return 0
+  end
+
+  local target = gapi.choose_adjacent(locale.gettext("Set up the rope ladder where?"), false)
+  if not target then
+    return 0
+  end
+
+  -- 自分のマスには置けない（本体の deploy_furn と同じ）
+  -- (Not on your own tile, same as deploy_furn.)
+  local here = u:get_pos_ms()
+  if target.x == here.x and target.y == here.y and target.z == here.z then
+    msg(locale.gettext("There is no room to hang it there."))
+    return 0
+  end
+
+  local map = gapi.get_map()
+  -- 掛けられるか・宙づりになるかは「縁から垂らす」と同じ判定を使う
+  -- (Reuse the same checks as lowering from a ledge.)
+  local problem, hanging = check_tile(map, target)
+  if problem then
+    msg(problem)
+    log("set up refused: %s", problem)
+    return 0
+  end
+
+  local seg = { furn = FURN_ID }
+  if hanging then
+    seg.ter = ter_str_at(map, target)
+    set_ter(map, target, HANG_TER)
+  end
+  set_furn(map, target, FURN_ID)
+
+  -- 実際に置けたか確認する。駄目なら元に戻して何も消費しない
+  -- (Make sure it took; otherwise undo and keep the item.)
+  if furn_str_at(map, target) ~= FURN_ID then
+    remove_segment(map, target, seg)
+    msg(locale.gettext("There is no room to hang it there."))
+    log("set up: set_furn_at did not take effect")
+    return 0
+  end
+
+  if hanging then
+    -- 宙づりは回収・破壊後に足場を戻すため記録する
+    -- (Record dangling ladders so the patrol can restore the air later.)
+    local a = map:bub_to_abs(target)
+    local segs = { { x = a.x, y = a.y, z = a.z, furn = FURN_ID, ter = seg.ter } }
+    ladder_list()[key_of(segs[1])] = { segs = segs }
+    msg(locale.gettext("You throw the rope ladder up and hook it onto the edge above.  It dangles in the air."))
+  else
+    msg(locale.gettext("You set up the rope ladder."))
+  end
+
+  u:mod_moves(-mod.cfg.move_cost)
+  log("set up at %d,%d,%d (hanging=%s)", target.x, target.y, target.z, tostring(hanging))
+  return 1
+end
+
+mod.set_up_rope_ladder = function(params)
+  local ok, res = pcall(set_up, params)
+  if not ok then
+    gdebug.log_info("RL: set_up_rope_ladder failed: " .. tostring(res))
+    return 0
+  end
+  return res or 0
 end
 
 mod.lower_rope_ladder = function(params)

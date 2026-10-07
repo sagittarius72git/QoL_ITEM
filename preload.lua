@@ -19,6 +19,17 @@ game.iuse_functions["RL_LOWER_ROPE_LADDER"] = {
   end,
 }
 
+-- 縄梯子：「ここに設置する」。空中なら宙づりで掛ける
+-- (Rope ladder: "Set it up here"; dangles if the tile is open air.)
+game.iuse_functions["RL_SET_UP_ROPE_LADDER"] = {
+  use = function(params)
+    if mod.set_up_rope_ladder then
+      return mod.set_up_rope_ladder(params)
+    end
+    return 0
+  end,
+}
+
 -- 縄梯子：宙づりの縄梯子が回収・破壊されたら、足場を空中に戻す（毎ターン。記録がなければすぐ戻る）
 gapi.add_on_every_x_hook(TimeDuration.from_turns(1), function()
   if mod.check_hanging_ladders then

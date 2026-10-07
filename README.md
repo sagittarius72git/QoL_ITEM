@@ -19,7 +19,7 @@ Materials: 2 ropes' worth of rope (long rope, makeshift rope, vine or plastic ro
 Use it (`a`) and choose one of two options.
 
 - **Lower it from a ledge** … pick an adjacent ledge and it hangs straight down from there, **one level** (for climbing down from a second-floor roof or a cliff).
-- **Set it up here** … hang it on an adjacent tile at the same level (for climbing up one level from below, just like a grappling hook).
+- **Set it up here** … hang it on an adjacent tile at the same level (for climbing up one level from below, just like a grappling hook). If that tile has no ground, you throw it up onto the edge above and it dangles there.
 
 Climbing and retrieving work the same as the game's grappling hook. Examine the ledge on the upper level to "Pull up", or examine the topmost tile of the rope ladder to "Take it down".
 It can't be hung into deep water or onto walls, furniture or people.

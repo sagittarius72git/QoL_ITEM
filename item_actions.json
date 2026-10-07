@@ -8,6 +8,13 @@
   },
   {
     "type": "item_action",
+    "id": "RL_SET_UP_ROPE_LADDER",
+    "name": {
+      "str": "Set up the rope ladder"
+    }
+  },
+  {
+    "type": "item_action",
     "id": "LGWD_SET_UP_DISPENSER",
     "name": {
       "str": "Set up the water dispenser"
