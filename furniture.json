@@ -4,7 +4,7 @@
     "id": "f_rl_rope_ladder",
     "name": "rope ladder",
     "looks_like": "f_rope_up",
-    "description": "A rope ladder hanging down from the level above.  You can climb it up or down.  Pull it up from the ledge above, or take it down from here, to carry it with you.",
+    "description": "A rope ladder hanging down from the level above.  You can climb it up or down.  If it doesn't reach the ground, it dangles in the air: you can still hang on it, for example to climb in through a window, but step off and you will fall.  Pull it up from the ledge above, or take it down from here, to carry it with you.",
     "symbol": "H",
     "color": "brown",
     "move_cost_mod": 1,
@@ -26,8 +26,8 @@
         {
           "item": "rope_30",
           "count": [
-            2,
-            4
+            1,
+            2
           ]
         },
         {
@@ -68,8 +68,8 @@
         {
           "item": "rope_30",
           "count": [
-            2,
-            4
+            1,
+            2
           ]
         },
         {

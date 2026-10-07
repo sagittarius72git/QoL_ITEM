@@ -71,8 +71,8 @@ mod.cfg = {
   max_levels = 1,
 
   -- 地面に届かなくても垂らせる（宙づり）
-  -- (Allow dangling when it doesn't reach the ground.) Disabled with the revert above.
-  allow_hanging = false,
+  -- (Allow dangling when it doesn't reach the ground.)
+  allow_hanging = true,
 
   -- 詳細をデバッグログに出す
   debug = false,

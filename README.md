@@ -14,7 +14,7 @@ A mod that bundles a few handy items.
 ## Rope ladder
 
 Crafting menu: Other → Tools (Fabrication 2, 30 minutes, cutting 1).
-Materials: 4 ropes' worth of rope (long rope, makeshift rope, vine or plastic rope; ×20 for short ones), 8 2x4s
+Materials: 2 ropes' worth of rope (long rope, makeshift rope, vine or plastic rope; ×10 for short ones), 8 2x4s
 
 Use it (`a`) and choose one of two options.
 
@@ -22,7 +22,13 @@ Use it (`a`) and choose one of two options.
 - **Set it up here** … hang it on an adjacent tile at the same level (for climbing up one level from below, just like a grappling hook).
 
 Climbing and retrieving work the same as the game's grappling hook. Examine the ledge on the upper level to "Pull up", or examine the topmost tile of the rope ladder to "Take it down".
-It can't be hung where the drop is deeper than one level, or into deep water or onto walls, furniture or people.
+It can't be hung into deep water or onto walls, furniture or people.
+
+### Dangling
+
+- If the drop is deeper than one level, it doesn't reach the ground and **dangles**. You can hang on the rope ladder and enter a building through an adjacent window and so on (for sneaking into an upper floor from the roof).
+- Stepping sideways off a rope ladder tile into the air makes you fall.
+- **Retrieve any dangling rope ladder before you remove this mod.**
 
 ## Homemade water dispenser
 
@@ -81,5 +87,5 @@ Materials: 1 shoddy laser rifle, 1 small storage battery, 7 pipes, 2 tiny electr
 
 You can change these in `main.lua`.
 
-- Rope ladder: `mod.cfg.move_cost` (time it takes to lower it)
+- Rope ladder: `mod.cfg.move_cost` (time it takes to lower it), `mod.cfg.allow_hanging` (whether it can dangle)
 - Homemade water dispenser: `CFG.need_fixture` (`true` restores the old rule that it can only be placed next to a sink or the like), `CFG.fixtures` (sinks and other fixtures), `CFG.refill_charges` (amount per refill)
