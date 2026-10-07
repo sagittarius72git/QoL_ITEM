@@ -70,9 +70,7 @@ mod.cfg = {
 
   -- 縁から垂らしたときに届く最大の階数
   -- (Max levels when lowered from a ledge.)
-  -- 3階分では落下して壊れる不具合があったため、安定している1階分に戻した。
-  -- (Reverted to 1: lowering 3 levels made the ladder fall and break.)
-  max_levels = 1,
+  max_levels = 3,
 
   -- 地面に届かなくても垂らせる（宙づり）
   -- (Allow dangling when it doesn't reach the ground.)
