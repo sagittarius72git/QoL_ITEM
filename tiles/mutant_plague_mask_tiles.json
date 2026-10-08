@@ -1,0 +1,36 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Custom Tileset",
+      "UNDEAD_PEOPLE_BASE",
+      "UNDEAD_PEOPLE",
+      "MSX++DEAD_PEOPLE",
+      "MshockXottoplus",
+      "UltimateCataclysm",
+      "Chibi_Ultica"
+    ],
+    "tiles-new": [
+      {
+        "file": "tiles/mutant_plague_mask.png",
+        "tiles": [
+          {
+            "id": "pm_mutant_plague_mask",
+            "fg": 0,
+            "rotates": false
+          }
+        ]
+      },
+      {
+        "file": "tiles/mutant_plague_mask_half.png",
+        "tiles": [
+          {
+            "id": "pm_mutant_plague_mask_half",
+            "fg": 0,
+            "rotates": false
+          }
+        ]
+      }
+    ]
+  }
+]

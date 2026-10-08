@@ -236,5 +236,54 @@
         "OVERSIZE"
       ]
     }
+  },
+  {
+    "id": "pm_mutant_plague_mask",
+    "type": "TOOL_ARMOR",
+    "copy-from": "mask_gas",
+    "looks_like": "mask_gas",
+    "name": {
+      "str": "mutant plague mask"
+    },
+    "description": "A gas mask rebuilt around a long leather beak with round glass eyepieces, like an old plague doctor's mask.  The roomy beak fits over muzzles, beaks, mandibles and other mutated mouths, but it is bulkier than a normal gas mask.  Provides excellent protection from smoke, teargas, and other contaminants.  It must be prepared before use.  If you want to protect yourself from plague, this is the best there is.",
+    "weight": "1200 g",
+    "volume": "1500 ml",
+    "color": "brown",
+    "material": [
+      "leather",
+      "plastic"
+    ],
+    "encumbrance": 35,
+    "flags": [
+      "SLEEP_IGNORE",
+      "ALLOWS_MUZZLE",
+      "OVERSIZE"
+    ]
+  },
+  {
+    "id": "pm_mutant_plague_mask_half",
+    "type": "TOOL_ARMOR",
+    "copy-from": "mask_gas",
+    "looks_like": "mask_gas",
+    "name": {
+      "str": "mutant plague half mask"
+    },
+    "description": "A long leather beak with gas filters packed inside, strapped over the mouth and nose like the lower half of a plague doctor's mask.  It leaves the eyes bare.  The roomy beak fits over muzzles, beaks, mandibles and other mutated mouths, but it is bulkier than a normal gas mask.  Provides excellent protection from smoke and other contaminants.  It must be prepared before use.  If you want to protect yourself from plague, this is the best there is.",
+    "weight": "800 g",
+    "volume": "1 L",
+    "color": "brown",
+    "material": [
+      "leather",
+      "plastic"
+    ],
+    "covers": [
+      "mouth"
+    ],
+    "encumbrance": 35,
+    "flags": [
+      "SLEEP_IGNORE",
+      "ALLOWS_MUZZLE",
+      "OVERSIZE"
+    ]
   }
 ]

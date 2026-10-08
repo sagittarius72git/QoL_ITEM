@@ -7,6 +7,7 @@ A mod that bundles a few handy items.
 - **Reusable makeshift bandage / antiseptic** … first aid supplies your companions can use any number of times
 - **Makeshift laser turret** … an automatic turret you unfold and place. It can be connected to the electric grid
 - **Ankle warmers / wool ankle warmers** … ankle warmth you can wear even with hooves, talons and other mutated feet
+- **Mutant plague mask / mutant plague half mask** … gas masks you can wear even with a mutated mouth
 
 **Requires a Lua-enabled build** (`lua_api_version: 2`).
 
@@ -97,6 +98,20 @@ Crafting menu: Armor → Feet (Tailoring).
 | (Either) from socks you have | 1 pair of socks or wool socks, cutting 1 | 5 minutes |
 
 Warmth and other stats are the same as regular socks and wool socks. You can wear them with hooves, talons, rabbit feet, leg tentacles or the huge mutation.
+
+## Mutant plague mask / mutant plague half mask
+
+Crafting menu: Armor → Head (Tailoring).
+
+| | Materials | Time |
+|---|---|---|
+| Mutant plague mask | same as a gas mask + 4 leather (or 4 plastic chunks), Tailoring 3, Fabrication 1, wrench | 30 minutes |
+| (Same) from a gas mask you have | 1 gas mask, 4 leather (or 4 plastic chunks), Tailoring 2 | 20 minutes |
+| Mutant plague half mask | 3 filter masks, 1 hose, 20 charcoal, 3 leather (or 3 plastic chunks), Tailoring 3, Fabrication 1, wrench | 20 minutes |
+
+- Filters and protection are the same as a gas mask (it must be prepared before use). In exchange, encumbrance is a bit higher than a gas mask (30 → 35).
+- The half mask covers only the mouth (it doesn't protect your eyes).
+- You can wear them with a muzzle, beak, mandibles, proboscis, saber teeth and similar mutations, or the huge mutation.
 
 ## Settings
 

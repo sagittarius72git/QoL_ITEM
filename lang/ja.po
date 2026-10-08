@@ -14,8 +14,8 @@ msgid "QoL Item"
 msgstr "QoL アイテム"
 
 #: modinfo.json
-msgid "A set of handy items: a rope ladder you can hang from a ledge, a homemade water dispenser that lets you auto-drink from the fluid grid, a makeshift bandage and disinfectant your companions can use any number of times, a makeshift laser turret you can hook up to the electric grid, and ankle warmers for mutated feet."
-msgstr "便利なアイテムのセットです：段差の縁から垂らせる縄梯子、液体グリッドの水を自動飲料で飲めるようにする自作ウォーターサーバー、仲間が何度でも使える間に合せの包帯と消毒、電力グリッドにつなげる即席レーザータレット、変異した足でも履けるアンクルウォーマー。"
+msgid "A set of handy items: a rope ladder you can hang from a ledge, a homemade water dispenser that lets you auto-drink from the fluid grid, a makeshift bandage and disinfectant your companions can use any number of times, a makeshift laser turret you can hook up to the electric grid, ankle warmers for mutated feet, and plague masks that fit mutated mouths."
+msgstr "便利なアイテムのセットです：段差の縁から垂らせる縄梯子、液体グリッドの水を自動飲料で飲めるようにする自作ウォーターサーバー、仲間が何度でも使える間に合せの包帯と消毒、電力グリッドにつなげる即席レーザータレット、変異した足でも履けるアンクルウォーマー、口が変異していても着けられるペストマスク。"
 
 msgid "Adds a craftable rope ladder.  Hang it down from a ledge or roof edge, or set it up against a wall from below, then climb one level up or down.  Pull it back up from above or take it down from below to carry it with you."
 msgstr "製作可能な縄梯子を追加する。段差や屋根の縁から垂らすか、下から壁際に掛けて、1階分を上り下りできる。上から引き上げるか下で片付ければ、また持ち運べる。"
@@ -304,3 +304,15 @@ msgstr[0] "ウールアンクルウォーマー"
 
 msgid "A loose tube of warm wool that wraps the ankle and the top of the foot, leaving the toes and sole bare, so it fits over hooves, talons and other mutated feet.  Once a friend to people with cold feet, it now keeps even mutants with oddly shaped feet warm."
 msgstr "足首と足の甲をゆったり包む、暖かいウールの筒。つま先と足裏は出ているので、蹄や鉤爪など、変異した足にも着けられる。元は冷え症に悩める人々の味方だったが、今は足の形状が特殊な変異体連中をも温めてくれる。"
+
+msgid "mutant plague mask"
+msgstr "変異体ペストマスク"
+
+msgid "A gas mask rebuilt around a long leather beak with round glass eyepieces, like an old plague doctor's mask.  The roomy beak fits over muzzles, beaks, mandibles and other mutated mouths, but it is bulkier than a normal gas mask.  Provides excellent protection from smoke, teargas, and other contaminants.  It must be prepared before use.  If you want to protect yourself from plague, this is the best there is."
+msgstr "ガスマスクを、丸いガラスの覗き窓と長い革のくちばしで作り直したもの。昔のペスト医師のマスクのようだ。ゆったりしたくちばしは、鼻面やくちばし、大顎など、変異した口にもかぶせられるが、普通のガスマスクよりかさばる。煙や催涙ガスなどの汚染物質からしっかり守ってくれる。使う前に準備が必要。疫病から身を守るならこれが一番だ。"
+
+msgid "mutant plague half mask"
+msgstr "変異体ハーフペストマスク"
+
+msgid "A long leather beak with gas filters packed inside, strapped over the mouth and nose like the lower half of a plague doctor's mask.  It leaves the eyes bare.  The roomy beak fits over muzzles, beaks, mandibles and other mutated mouths, but it is bulkier than a normal gas mask.  Provides excellent protection from smoke and other contaminants.  It must be prepared before use.  If you want to protect yourself from plague, this is the best there is."
+msgstr "ガスフィルターを詰めた長い革のくちばしを、ペスト医師のマスクの下半分のように口と鼻に固定するもの。目は覆わない。ゆったりしたくちばしは、鼻面やくちばし、大顎など、変異した口にもかぶせられるが、普通のガスマスクよりかさばる。煙などの汚染物質からしっかり守ってくれる。使う前に準備が必要。疫病から身を守るならこれが一番だ。"
