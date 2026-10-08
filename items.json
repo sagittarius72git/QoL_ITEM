@@ -178,7 +178,8 @@
       "moves": 500
     },
     "flags": [
-      "ALLOWS_REMOTE_USE"
+      "ALLOWS_REMOTE_USE",
+      "DESTROY_ON_DECHARGE"
     ]
   },
   {
