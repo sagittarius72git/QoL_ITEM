@@ -210,7 +210,7 @@
       "str": "pair of ankle warmers",
       "str_pl": "pairs of ankle warmers"
     },
-    "description": "A loose tube of cloth that wraps the ankle and the top of the foot, leaving the toes and sole bare, so it fits over hooves, talons and other mutated feet.",
+    "description": "A loose tube of cloth that wraps the ankle and the top of the foot, leaving the toes and sole bare, so it fits over hooves, talons and other mutated feet.  Once a friend to people with cold feet, it now keeps even mutants with oddly shaped feet warm.",
     "extend": {
       "flags": [
         "ALLOWS_HOOVES",
@@ -228,7 +228,7 @@
       "str": "pair of wool ankle warmers",
       "str_pl": "pairs of wool ankle warmers"
     },
-    "description": "A loose tube of warm wool that wraps the ankle and the top of the foot, leaving the toes and sole bare, so it fits over hooves, talons and other mutated feet.",
+    "description": "A loose tube of warm wool that wraps the ankle and the top of the foot, leaving the toes and sole bare, so it fits over hooves, talons and other mutated feet.  Once a friend to people with cold feet, it now keeps even mutants with oddly shaped feet warm.",
     "extend": {
       "flags": [
         "ALLOWS_HOOVES",

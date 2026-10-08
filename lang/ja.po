@@ -295,12 +295,12 @@ msgid "pair of ankle warmers"
 msgid_plural "pairs of ankle warmers"
 msgstr[0] "アンクルウォーマー"
 
-msgid "A loose tube of cloth that wraps the ankle and the top of the foot, leaving the toes and sole bare, so it fits over hooves, talons and other mutated feet."
-msgstr "足首と足の甲をゆったり包む筒状の布。つま先と足裏は出ているので、蹄や鉤爪など、変異した足にも着けられる。"
+msgid "A loose tube of cloth that wraps the ankle and the top of the foot, leaving the toes and sole bare, so it fits over hooves, talons and other mutated feet.  Once a friend to people with cold feet, it now keeps even mutants with oddly shaped feet warm."
+msgstr "足首と足の甲をゆったり包む筒状の布。つま先と足裏は出ているので、蹄や鉤爪など、変異した足にも着けられる。元は冷え症に悩める人々の味方だったが、今は足の形状が特殊な変異体連中をも温めてくれる。"
 
 msgid "pair of wool ankle warmers"
 msgid_plural "pairs of wool ankle warmers"
 msgstr[0] "ウールアンクルウォーマー"
 
-msgid "A loose tube of warm wool that wraps the ankle and the top of the foot, leaving the toes and sole bare, so it fits over hooves, talons and other mutated feet."
-msgstr "足首と足の甲をゆったり包む、暖かいウールの筒。つま先と足裏は出ているので、蹄や鉤爪など、変異した足にも着けられる。"
+msgid "A loose tube of warm wool that wraps the ankle and the top of the foot, leaving the toes and sole bare, so it fits over hooves, talons and other mutated feet.  Once a friend to people with cold feet, it now keeps even mutants with oddly shaped feet warm."
+msgstr "足首と足の甲をゆったり包む、暖かいウールの筒。つま先と足裏は出ているので、蹄や鉤爪など、変異した足にも着けられる。元は冷え症に悩める人々の味方だったが、今は足の形状が特殊な変異体連中をも温めてくれる。"
