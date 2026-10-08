@@ -15,8 +15,7 @@
           "turret_mount",
           "mounted_laser_rifle_cheap",
           "flt_controls_shoddy",
-          "storage_battery_mount",
-          "flt_medium_storage_battery_swappable",
+          "medium_storage_battery",
           "wheel_caster"
         ]
       }

@@ -13,48 +13,5 @@
         "NOINSTALL"
       ]
     }
-  },
-  {
-    "type": "vehicle_part",
-    "id": "flt_medium_storage_battery_swappable",
-    "copy-from": "medium_storage_battery",
-    "name": {
-      "str": "swappable medium storage battery"
-    },
-    "description": "A medium storage battery sitting in a battery case on a quick release framework, so it can be swapped in seconds without tools.",
-    "location": "on_battery_mount",
-    "requirements": {
-      "install": {
-        "skills": [
-          [
-            "mechanics",
-            0
-          ]
-        ],
-        "time": "10 s",
-        "using": []
-      },
-      "removal": {
-        "skills": [
-          [
-            "mechanics",
-            0
-          ]
-        ],
-        "time": "10 s",
-        "using": []
-      }
-    },
-    "extend": {
-      "flags": [
-        "NEEDS_BATTERY_MOUNT",
-        "NO_LIFT_REQ"
-      ]
-    },
-    "delete": {
-      "flags": [
-        "FOLDABLE"
-      ]
-    }
   }
 ]
