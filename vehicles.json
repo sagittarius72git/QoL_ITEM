@@ -2,7 +2,7 @@
   {
     "id": "flt_folding_laser_turret",
     "type": "vehicle",
-    "name": "Folding Laser Turret",
+    "name": "Makeshift Laser Turret",
     "blueprint": [
       "T"
     ],
@@ -15,7 +15,7 @@
           "turret_mount",
           "mounted_laser_rifle_cheap",
           "flt_controls_shoddy",
-          "small_storage_battery"
+          "medium_storage_battery"
         ]
       }
     ],

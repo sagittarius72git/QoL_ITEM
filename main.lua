@@ -5,7 +5,7 @@
   (This mod has four kinds of items; only the first two use Lua.)
     1. 縄梯子（Rope Ladder）           … 「縁から垂らす」
     2. 自作ウォーターサーバー（Liquid Grid Water Dispenser） … 設置・補充・調べる
-  （3. 間に合せの包帯・間に合せの消毒、4. 折りたたみレーザータレット は JSON だけで動くので、ここには何もない）
+  （3. 間に合せの包帯・間に合せの消毒、4. 即席レーザータレット は JSON だけで動くので、ここには何もない）
   (Items 3 and 4 are JSON-only, so there is no Lua for them here.)
 
   それぞれ do ... end で囲み、ローカル変数が混ざらないようにしている。

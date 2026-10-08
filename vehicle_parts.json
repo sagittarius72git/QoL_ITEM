@@ -7,7 +7,7 @@
       "str": "makeshift turret targeting unit"
     },
     "item": "flt_turret_brain",
-    "description": "A makeshift targeting unit wired into the folding laser turret.  It lets the turret pick targets and fire on its own in automatic mode.  It can't be installed on other vehicles.",
+    "description": "A makeshift targeting unit wired into the makeshift laser turret.  It lets the turret pick targets and fire on its own in automatic mode.  It can't be installed on other vehicles.",
     "extend": {
       "flags": [
         "NOINSTALL"
