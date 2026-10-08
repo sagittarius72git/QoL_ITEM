@@ -1,0 +1,49 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "UltimateCataclysm"
+    ],
+    "tiles-new": [
+      {
+        "file": "tiles/worn_overlays.png",
+        "sprite_width": 32,
+        "sprite_height": 36,
+        "sprite_offset_x": 0,
+        "sprite_offset_y": -8,
+        "tiles": [
+          {
+            "id": "overlay_female_worn_pm_mutant_plague_mask",
+            "fg": 0,
+            "rotates": false
+          },
+          {
+            "id": "overlay_male_worn_pm_mutant_plague_mask",
+            "fg": 1,
+            "rotates": false
+          },
+          {
+            "id": "overlay_female_worn_pm_mutant_plague_mask_half",
+            "fg": 2,
+            "rotates": false
+          },
+          {
+            "id": "overlay_male_worn_pm_mutant_plague_mask_half",
+            "fg": 3,
+            "rotates": false
+          },
+          {
+            "id": "overlay_worn_ts_socks_toeless",
+            "fg": 4,
+            "rotates": false
+          },
+          {
+            "id": "overlay_worn_ts_socks_wool_toeless",
+            "fg": 5,
+            "rotates": false
+          }
+        ]
+      }
+    ]
+  }
+]
