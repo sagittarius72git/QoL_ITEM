@@ -157,9 +157,9 @@
     "name": {
       "str": "makeshift laser turret"
     },
-    "description": "A shoddy laser rifle on a rotating mount, bolted to a foldable frame with a medium storage battery and a makeshift targeting unit.  Use it to unfold it where you stand.  Set the turret to automatic fire and it will shoot at enemies on its own, drawing power from its battery.  Connect it to a jumper cable connector with a jumper cable to run it from a building's electric grid.  Fold it up again from the vehicle menu to carry it.",
-    "weight": "39 kg",
-    "volume": "11 L",
+    "description": "A shoddy laser rifle on a rotating mount, bolted to a foldable frame on casters with a swappable medium storage battery and a makeshift targeting unit.  Use it to unfold it where you stand.  Set the turret to automatic fire and it will shoot at enemies on its own, drawing power from its battery.  Connect it to a jumper cable connector with a jumper cable to run it from a building's electric grid.  Fold it up again from the vehicle menu to carry it.",
+    "weight": "42 kg",
+    "volume": "14500 ml",
     "price": "800 USD",
     "price_postapoc": "80 USD",
     "to_hit": -4,

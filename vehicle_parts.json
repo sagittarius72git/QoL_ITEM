@@ -13,5 +13,59 @@
         "NOINSTALL"
       ]
     }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "flt_battery_mount",
+    "copy-from": "storage_battery_mount",
+    "name": {
+      "str": "foldable storage battery case"
+    },
+    "description": "A storage battery case that folds up with the makeshift laser turret.  It lets you lift a storage battery into place and wire it up quickly, so the battery can be swapped easily.",
+    "folded_volume": "2250 ml",
+    "extend": {
+      "flags": [
+        "FOLDABLE"
+      ]
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "flt_medium_storage_battery_swappable",
+    "copy-from": "medium_storage_battery",
+    "name": {
+      "str": "swappable medium storage battery"
+    },
+    "description": "A medium storage battery sitting in a battery case on a quick release framework, so it can be swapped in seconds without tools.",
+    "location": "on_battery_mount",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            0
+          ]
+        ],
+        "time": "10 s",
+        "using": []
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            0
+          ]
+        ],
+        "time": "10 s",
+        "using": []
+      }
+    },
+    "extend": {
+      "flags": [
+        "NEEDS_BATTERY_MOUNT",
+        "NO_LIFT_REQ",
+        "FOLDABLE"
+      ]
+    }
   }
 ]

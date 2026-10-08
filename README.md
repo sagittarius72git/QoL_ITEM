@@ -81,14 +81,16 @@ Put them in a companion's inventory and the companion will use them to treat the
 ## Makeshift laser turret
 
 Crafting menu: Weapons → Ranged (Electronics 5, 2 hours). Like the shoddy laser rifle, you learn it automatically or from electronics books.
-Materials: 1 shoddy laser rifle, 1 medium storage battery, 7 pipes, 2 tiny electric motors, 1 spring, 1 camera of any kind, 5 electronic scrap, 30 cable, soldering (30). Tools: fine screwdriver, wrench, hacksaw
+Materials: 1 shoddy laser rifle, 1 medium storage battery, 1 storage battery case, 1 set of casters, 7 pipes, 2 tiny electric motors, 1 spring, 1 camera of any kind, 5 electronic scrap, 30 cable, soldering (30). Tools: fine screwdriver, wrench, hacksaw
 
 1. Use it (`a`) to unfold it where you stand (it becomes a one-tile vehicle).
 2. Interact with the vehicle on the turret's tile and set the turret's firing mode to **automatic**.
 3. It shoots nearby enemies automatically, using power.
 
 - To carry it, **fold** it from the vehicle menu and it turns back into an item (remaining battery charge and damage are kept).
-- It runs on its built-in medium storage battery. **It is empty the first time you unfold it**, so charge it first.
+- It runs on a medium storage battery in a battery case. **It is empty the first time you unfold it**, so charge it first.
+- The battery can be swapped in seconds without tools (remove it from the vehicle menu and install another medium storage battery).
+- It has casters, so you can push it around while unfolded (grab it with `G`).
 - To run it from the electric grid, build a "jumper cable connector" in a building with a grid (construction menu: Workshop), then connect it to the turret with a jumper cable. Unplug the cable before folding it.
 - The targeting unit can be removed but not put back (nor installed on other vehicles). Without it, the turret can't fire automatically.
 
