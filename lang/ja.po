@@ -14,8 +14,8 @@ msgid "QoL Item"
 msgstr "QoL アイテム"
 
 #: modinfo.json
-msgid "A set of handy items: a rope ladder you can hang from a ledge, a homemade water dispenser that lets you auto-drink from the fluid grid, a makeshift bandage and disinfectant your companions can use any number of times, and a makeshift laser turret you can hook up to the electric grid."
-msgstr "便利なアイテムのセットです：段差の縁から垂らせる縄梯子、液体グリッドの水を自動飲料で飲めるようにする自作ウォーターサーバー、仲間が何度でも使える間に合せの包帯と消毒、電力グリッドにつなげる即席レーザータレット。"
+msgid "A set of handy items: a rope ladder you can hang from a ledge, a homemade water dispenser that lets you auto-drink from the fluid grid, a makeshift bandage and disinfectant your companions can use any number of times, a makeshift laser turret you can hook up to the electric grid, and toeless socks for mutated feet."
+msgstr "便利なアイテムのセットです：段差の縁から垂らせる縄梯子、液体グリッドの水を自動飲料で飲めるようにする自作ウォーターサーバー、仲間が何度でも使える間に合せの包帯と消毒、電力グリッドにつなげる即席レーザータレット、変異した足でも履ける指抜きソックス。"
 
 msgid "Adds a craftable rope ladder.  Hang it down from a ledge or roof edge, or set it up against a wall from below, then climb one level up or down.  Pull it back up from above or take it down from below to carry it with you."
 msgstr "製作可能な縄梯子を追加する。段差や屋根の縁から垂らすか、下から壁際に掛けて、1階分を上り下りできる。上から引き上げるか下で片付ければ、また持ち運べる。"
@@ -290,3 +290,17 @@ msgstr[0] "間に合わせの照準装置"
 
 #~ msgid "It's too far down.  The rope ladder only reaches one level."
 #~ msgstr "下まで遠すぎる。縄梯子は1階分しか届かない。"
+
+msgid "pair of toeless socks"
+msgid_plural "pairs of toeless socks"
+msgstr[0] "指抜きソックス"
+
+msgid "Socks with the toes cut open and the cuffs stretched loose, so they slip over hooves, talons and other mutated feet."
+msgstr "つま先を切り開き、履き口をゆるく伸ばした靴下。蹄や鉤爪など、変異した足にも履ける。"
+
+msgid "pair of toeless wool socks"
+msgid_plural "pairs of toeless wool socks"
+msgstr[0] "指抜きウールソックス"
+
+msgid "Warm wool socks with the toes cut open and the cuffs stretched loose, so they slip over hooves, talons and other mutated feet."
+msgstr "つま先を切り開き、履き口をゆるく伸ばした暖かいウールの靴下。蹄や鉤爪など、変異した足にも履ける。"

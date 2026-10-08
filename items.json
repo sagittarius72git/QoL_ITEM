@@ -200,5 +200,41 @@
     "symbol": ",",
     "color": "yellow",
     "looks_like": "turret_controls"
+  },
+  {
+    "id": "ts_socks_toeless",
+    "type": "ARMOR",
+    "copy-from": "socks",
+    "looks_like": "socks",
+    "name": {
+      "str": "pair of toeless socks",
+      "str_pl": "pairs of toeless socks"
+    },
+    "description": "Socks with the toes cut open and the cuffs stretched loose, so they slip over hooves, talons and other mutated feet.",
+    "extend": {
+      "flags": [
+        "ALLOWS_HOOVES",
+        "ALLOWS_CLAWS_FOOT",
+        "OVERSIZE"
+      ]
+    }
+  },
+  {
+    "id": "ts_socks_wool_toeless",
+    "type": "ARMOR",
+    "copy-from": "socks_wool",
+    "looks_like": "socks_wool",
+    "name": {
+      "str": "pair of toeless wool socks",
+      "str_pl": "pairs of toeless wool socks"
+    },
+    "description": "Warm wool socks with the toes cut open and the cuffs stretched loose, so they slip over hooves, talons and other mutated feet.",
+    "extend": {
+      "flags": [
+        "ALLOWS_HOOVES",
+        "ALLOWS_CLAWS_FOOT",
+        "OVERSIZE"
+      ]
+    }
   }
 ]

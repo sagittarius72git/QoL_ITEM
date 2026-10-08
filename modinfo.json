@@ -6,7 +6,7 @@
     "authors": [
       "sagittarius72"
     ],
-    "description": "A set of handy items: a rope ladder you can hang from a ledge, a homemade water dispenser that lets you auto-drink from the fluid grid, a makeshift bandage and disinfectant your companions can use any number of times, and a makeshift laser turret you can hook up to the electric grid.",
+    "description": "A set of handy items: a rope ladder you can hang from a ledge, a homemade water dispenser that lets you auto-drink from the fluid grid, a makeshift bandage and disinfectant your companions can use any number of times, a makeshift laser turret you can hook up to the electric grid, and toeless socks for mutated feet.",
     "category": "items",
     "lua_api_version": 2,
     "dependencies": [

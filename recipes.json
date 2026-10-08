@@ -279,5 +279,92 @@
         ]
       ]
     ]
+  },
+  {
+    "type": "recipe",
+    "result": "ts_socks_toeless",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_FEET",
+    "skill_used": "tailor",
+    "time": "10 m",
+    "autolearn": true,
+    "using": [
+      [
+        "sewing_standard",
+        4
+      ]
+    ],
+    "components": [
+      [
+        [
+          "rag",
+          2
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "ts_socks_wool_toeless",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_FEET",
+    "skill_used": "tailor",
+    "difficulty": 1,
+    "time": "1 h",
+    "autolearn": true,
+    "using": [
+      [
+        "tailoring_wool_knitting",
+        80
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "ts_socks_toeless",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_FEET",
+    "skill_used": "tailor",
+    "id_suffix": "from_socks",
+    "time": "5 m",
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "socks",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "ts_socks_wool_toeless",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_FEET",
+    "skill_used": "tailor",
+    "id_suffix": "from_socks",
+    "time": "5 m",
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "socks_wool",
+          1
+        ]
+      ]
+    ]
   }
 ]

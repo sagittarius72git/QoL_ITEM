@@ -6,6 +6,7 @@ A mod that bundles a few handy items.
 - **Homemade water dispenser** … lets you drink water from the fluid grid with Auto Drink
 - **Reusable makeshift bandage / antiseptic** … first aid supplies your companions can use any number of times
 - **Makeshift laser turret** … an automatic turret you unfold and place. It can be connected to the electric grid
+- **Toeless socks / toeless wool socks** … socks you can wear even with hooves, talons and other mutated feet
 
 **Requires a Lua-enabled build** (`lua_api_version: 2`).
 
@@ -92,6 +93,18 @@ Materials: 1 shoddy laser rifle, 1 medium storage battery, 1 set of casters, 7 p
 - It has casters, so you can push it around while unfolded (grab it with `G`).
 - To run it from the electric grid, build a "jumper cable connector" in a building with a grid (construction menu: Workshop), then connect it to the turret with a jumper cable. Unplug the cable before folding it.
 - The targeting unit can be removed but not put back (nor installed on other vehicles). Without it, the turret can't fire automatically.
+
+## Toeless socks / toeless wool socks
+
+Crafting menu: Armor → Feet (Tailoring).
+
+| | Materials | Time |
+|---|---|---|
+| Toeless socks | same as socks (2 rags and so on) | 10 minutes |
+| Toeless wool socks | same as wool socks (yarn and so on, Tailoring 1) | 1 hour |
+| (Either) from socks you have | 1 pair of socks or wool socks, cutting 1 | 5 minutes |
+
+Warmth and other stats are the same as regular socks and wool socks. You can wear them with hooves, talons, rabbit feet, leg tentacles or the huge mutation.
 
 ## Settings
 
