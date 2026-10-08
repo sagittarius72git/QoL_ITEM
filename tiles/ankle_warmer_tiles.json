@@ -12,25 +12,20 @@
     ],
     "tiles-new": [
       {
-        "file": "tiles/water_dispenser.png",
+        "file": "tiles/ankle_warmer.png",
         "tiles": [
           {
-            "id": "f_lgwd_water_dispenser",
+            "id": "ts_socks_toeless",
             "fg": 0,
-            "rotates": false
-          },
-          {
-            "id": "lgwd_water_dispenser",
-            "fg": 1,
             "rotates": false
           }
         ]
       },
       {
-        "file": "tiles/reservoir.png",
+        "file": "tiles/ankle_warmer_wool.png",
         "tiles": [
           {
-            "id": "lgwd_reservoir",
+            "id": "ts_socks_wool_toeless",
             "fg": 0,
             "rotates": false
           }

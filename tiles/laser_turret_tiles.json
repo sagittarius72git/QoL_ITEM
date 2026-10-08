@@ -12,36 +12,26 @@
     ],
     "tiles-new": [
       {
-        "file": "tiles/rope_ladder.png",
+        "file": "tiles/laser_turret_item.png",
         "tiles": [
           {
-            "id": "f_rl_rope_ladder",
+            "id": "flt_folding_laser_turret",
+            "fg": 0,
+            "rotates": false
+          }
+        ]
+      },
+      {
+        "file": "tiles/turret_brain.png",
+        "tiles": [
+          {
+            "id": "flt_turret_brain",
             "fg": 0,
             "rotates": false
           },
           {
-            "id": "f_rl_rope_ladder_bottom",
+            "id": "vp_flt_controls_shoddy",
             "fg": 0,
-            "rotates": false
-          },
-          {
-            "id": "f_rl_rope_ladder_mid",
-            "fg": 0,
-            "rotates": false
-          },
-          {
-            "id": "f_rl_rope_ladder_top",
-            "fg": 0,
-            "rotates": false
-          },
-          {
-            "id": "f_rl_rope_bridge",
-            "fg": 0,
-            "rotates": false
-          },
-          {
-            "id": "rl_rope_ladder",
-            "fg": 1,
             "rotates": false
           }
         ]
