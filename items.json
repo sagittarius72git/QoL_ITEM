@@ -207,10 +207,10 @@
     "copy-from": "socks",
     "looks_like": "socks",
     "name": {
-      "str": "pair of toeless socks",
-      "str_pl": "pairs of toeless socks"
+      "str": "pair of ankle warmers",
+      "str_pl": "pairs of ankle warmers"
     },
-    "description": "Socks with the toes cut open and the cuffs stretched loose, so they slip over hooves, talons and other mutated feet.",
+    "description": "A loose tube of cloth that wraps the ankle and the top of the foot, leaving the toes and sole bare, so it fits over hooves, talons and other mutated feet.",
     "extend": {
       "flags": [
         "ALLOWS_HOOVES",
@@ -225,10 +225,10 @@
     "copy-from": "socks_wool",
     "looks_like": "socks_wool",
     "name": {
-      "str": "pair of toeless wool socks",
-      "str_pl": "pairs of toeless wool socks"
+      "str": "pair of wool ankle warmers",
+      "str_pl": "pairs of wool ankle warmers"
     },
-    "description": "Warm wool socks with the toes cut open and the cuffs stretched loose, so they slip over hooves, talons and other mutated feet.",
+    "description": "A loose tube of warm wool that wraps the ankle and the top of the foot, leaving the toes and sole bare, so it fits over hooves, talons and other mutated feet.",
     "extend": {
       "flags": [
         "ALLOWS_HOOVES",
