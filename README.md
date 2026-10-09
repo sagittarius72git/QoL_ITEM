@@ -8,6 +8,7 @@ A mod that bundles a few handy items.
 - **Makeshift laser turret** … an automatic turret you unfold and place. It can be connected to the electric grid
 - **Ankle warmers / wool ankle warmers** … ankle warmth you can wear even with hooves, talons and other mutated feet
 - **Mutant plague mask / mutant plague half mask** … gas masks you can wear even with a mutated mouth
+- **Small and large cardboard box recipes** … lets you craft the game's own cardboard boxes
 
 **Requires a Lua-enabled build** (`lua_api_version: 2`).
 
@@ -112,6 +113,15 @@ Crafting menu: Armor → Head (Tailoring).
 - Filters and protection are the same as a gas mask (it must be prepared before use). In exchange, encumbrance is a bit higher than a gas mask (30 → 35).
 - The half mask covers only the mouth (it doesn't protect your eyes).
 - You can wear them with a muzzle, beak, mandibles, proboscis, saber teeth and similar mutations, or the huge mutation.
+
+## Small and large cardboard boxes
+
+Lets you craft these items from the base game. Crafting menu: Other → Containers (Fabrication 1, cutting 1), the same way as the game's own cardboard box recipe.
+
+| | Materials | Time |
+|---|---|---|
+| Small cardboard box | 18 cardboard, 20 duct tape | 3 minutes |
+| Large cardboard box | 130 cardboard, 150 duct tape | 15 minutes |
 
 ## Settings
 
