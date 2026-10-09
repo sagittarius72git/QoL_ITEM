@@ -178,110 +178,6 @@
   },
   {
     "type": "recipe",
-    "result": "flt_folding_laser_turret",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "electronics",
-    "difficulty": 5,
-    "time": "2 h",
-    "autolearn": true,
-    "book_learn": [
-      [
-        "advanced_electronics",
-        3
-      ],
-      [
-        "textbook_electronics",
-        3
-      ]
-    ],
-    "qualities": [
-      {
-        "id": "SCREW_FINE",
-        "level": 1
-      },
-      {
-        "id": "WRENCH",
-        "level": 1
-      },
-      {
-        "id": "SAW_M",
-        "level": 1
-      }
-    ],
-    "using": [
-      [
-        "soldering_standard",
-        30
-      ]
-    ],
-    "components": [
-      [
-        [
-          "laser_rifle_cheap",
-          1
-        ]
-      ],
-      [
-        [
-          "medium_storage_battery",
-          1
-        ]
-      ],
-      [
-        [
-          "wheel_caster",
-          1
-        ]
-      ],
-      [
-        [
-          "pipe",
-          7
-        ]
-      ],
-      [
-        [
-          "motor_tiny",
-          2
-        ]
-      ],
-      [
-        [
-          "spring",
-          1
-        ]
-      ],
-      [
-        [
-          "camera",
-          1
-        ],
-        [
-          "camera_pro",
-          1
-        ],
-        [
-          "omnicamera",
-          1
-        ]
-      ],
-      [
-        [
-          "e_scrap",
-          5
-        ]
-      ],
-      [
-        [
-          "cable",
-          30
-        ]
-      ]
-    ]
-  },
-  {
-    "type": "recipe",
     "result": "ts_socks_toeless",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_FEET",
@@ -520,6 +416,66 @@
         [
           "plastic_chunk",
           3
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "box_small",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_CONTAINERS",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "3 m",
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "cardboard",
+          18
+        ]
+      ],
+      [
+        [
+          "duct_tape",
+          20
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "box_large",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_CONTAINERS",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "15 m",
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "cardboard",
+          130
+        ]
+      ],
+      [
+        [
+          "duct_tape",
+          150
         ]
       ]
     ]

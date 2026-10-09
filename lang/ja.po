@@ -14,8 +14,8 @@ msgid "QoL Item"
 msgstr "QoL アイテム"
 
 #: modinfo.json
-msgid "A set of handy items: a rope ladder you can hang from a ledge, a homemade water dispenser that lets you auto-drink from the fluid grid, a makeshift bandage and disinfectant your companions can use any number of times, a makeshift laser turret you can hook up to the electric grid, ankle warmers for mutated feet, and plague masks that fit mutated mouths."
-msgstr "便利なアイテムのセットです：段差の縁から垂らせる縄梯子、液体グリッドの水を自動飲料で飲めるようにする自作ウォーターサーバー、仲間が何度でも使える間に合せの包帯と消毒、電力グリッドにつなげる即席レーザータレット、変異した足でも履けるアンクルウォーマー、口が変異していても着けられるペストマスク。"
+msgid "A set of handy items: a rope ladder you can hang from a ledge, a homemade water dispenser that lets you auto-drink from the fluid grid, a makeshift bandage and disinfectant your companions can use any number of times, ankle warmers for mutated feet, and plague masks that fit mutated mouths."
+msgstr "便利なアイテムのセットです：段差の縁から垂らせる縄梯子、液体グリッドの水を自動飲料で飲めるようにする自作ウォーターサーバー、仲間が何度でも使える間に合せの包帯と消毒、変異した足でも履けるアンクルウォーマー、口が変異していても着けられるペストマスク。"
 
 msgid "Adds a craftable rope ladder.  Hang it down from a ledge or roof edge, or set it up against a wall from below, then climb one level up or down.  Pull it back up from above or take it down from below to carry it with you."
 msgstr "製作可能な縄梯子を追加する。段差や屋根の縁から垂らすか、下から壁際に掛けて、1階分を上り下りできる。上から引き上げるか下で片付ければ、また持ち運べる。"
@@ -247,36 +247,6 @@ msgstr "ウォーターサーバーを設置する"
 
 msgid "You set up the water dispenser.  Mark it as an Auto Drink zone to drink from it automatically."
 msgstr "自作ウォーターサーバーを設置した。「自動飲料」区域にすると、自動で飲むようになる。"
-
-#: vehicles.json
-msgid "Makeshift Laser Turret"
-msgstr "即席レーザータレット"
-
-#: items.json
-msgid "A shoddy laser rifle on a rotating mount, bolted to a foldable frame on casters with a medium storage battery and a makeshift targeting unit.  Use it to unfold it where you stand.  Set the turret to automatic fire and it will shoot at enemies on its own, drawing power from its battery.  Connect it to a jumper cable connector with a jumper cable to run it from a building's electric grid.  Fold it up again from the vehicle menu to carry it."
-msgstr "粗悪なレーザーライフルを回転式の台に載せ、中型蓄電池と間に合わせの照準装置と一緒に、キャスター付きの折りたたみフレームへボルト留めしたもの。使うとその場に広げて設置する。タレットを自動射撃にすると、内蔵の蓄電池の電力で敵を勝手に撃つ。ジャンパーケーブルでジャンパーケーブル接続口とつなげば、建物の電力グリッドで動かせる。持ち運ぶときは車両メニューから折りたたむ。"
-
-#: items.json
-msgid "You unfold the %s and lock its legs in place."
-msgstr "%sを広げ、脚を固定した。"
-
-#: items.json
-msgid "A tangle of a camera, a tiny motor and salvaged circuit boards that can aim a turret on its own.  It is wired specifically for the makeshift laser turret and can't be installed anywhere else."
-msgstr "カメラと小型モーター、拾い集めた基板を寄せ集めた、タレットを自力で狙わせる装置。即席レーザータレット専用の配線になっていて、ほかには取り付けられない。"
-
-#: vehicle_parts.json
-msgid "A makeshift targeting unit wired into the makeshift laser turret.  It lets the turret pick targets and fire on its own in automatic mode.  It can't be installed on other vehicles."
-msgstr "即席レーザータレットに組み込まれた、間に合わせの照準装置。自動射撃モードでタレットが自分で目標を選んで撃てるようになる。ほかの車両には取り付けられない。"
-
-#: items.json
-msgid "makeshift laser turret"
-msgid_plural "makeshift laser turret"
-msgstr[0] "即席レーザータレット"
-
-#: items.json vehicle_parts.json
-msgid "makeshift turret targeting unit"
-msgid_plural "makeshift turret targeting unit"
-msgstr[0] "間に合わせの照準装置"
 
 #~ msgid "Set it up next to a sink"
 #~ msgstr "流し台の隣に設置する"
