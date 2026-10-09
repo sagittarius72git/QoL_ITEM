@@ -14,9 +14,7 @@ A mod that bundles a few handy items.
 ---
 
 ## Rope ladder
-
-Crafting menu: Other → Tools (Fabrication 2, 30 minutes, cutting 1).
-Materials: 2 ropes' worth of rope (long rope, makeshift rope, vine or plastic rope; ×10 for short ones), 8 2x4s
+Crafting menu: Other → Tools
 
 Use it (`a`) and choose one of three options.
 
@@ -25,20 +23,11 @@ Use it (`a`) and choose one of three options.
 - **Throw it across a gap** … throw it onto ground farther away at the same level to make a bridge (see below).
 
 Examine the ledge on the upper level to "Pull up", or examine the topmost tile of the rope ladder to "Take it down".
-It can't be hung into deep water or onto walls, furniture or people (if one is on a level partway down, it stops just above it).
-- If 3 levels don't reach the ground, the bottom is left dangling.
-- If a section partway down is destroyed, everything below it falls.
-- **Retrieve your rope ladders before you remove this mod.**
-
 - Use it, choose "Throw it across a gap" and pick a direction. You throw it onto the ground on the other side, **up to 3 tiles away** at the same level, and hook it there. The ladder spans the open air in between, and you can cross it like a bridge.
-- It only works when every tile in between is empty open air and there is ground beyond it.
-- Examine the ladder to "Take it down". If any tile of it is destroyed, the whole thing comes down.
 - **Retrieve any ladder thrown across a gap before you remove this mod.**
 
 ## Homemade water dispenser
-
-Crafting menu: Other → Containers (Fabrication 1, 20 minutes, cutting 1).
-Materials: 1 gallon jug (or 4 plastic bottles / 1 plastic canteen), 1 rubber hose or leather hose, 2 2x4s or 4 heavy sticks, 20 duct tape or 1 long string
+Crafting menu: Other → Containers
 
 1. Use it, choose "Set up the water dispenser", and place it on an empty floor tile **inside a building with a fluid grid**
 2. Mark that tile as an "Auto Drink" zone
