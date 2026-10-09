@@ -5,7 +5,6 @@ A mod that bundles a few handy items.
 - **Rope ladder** … hang it from a ledge to climb down, or set it up from below to climb up
 - **Homemade water dispenser** … lets you drink water from the fluid grid with Auto Drink
 - **Reusable makeshift bandage / antiseptic** … first aid supplies your companions can use any number of times
-- **Makeshift laser turret** … an automatic turret you unfold and place. It can be connected to the electric grid
 - **Ankle warmers / wool ankle warmers** … ankle warmth you can wear even with hooves, talons and other mutated feet
 - **Mutant plague mask / mutant plague half mask** … gas masks you can wear even with a mutated mouth
 - **Small and large cardboard box recipes** … lets you craft the game's own cardboard boxes
@@ -72,21 +71,6 @@ Put them in a companion's inventory and the companion will use them to treat the
 - **The player can't use them** (you'll see a message that it needs at least 1 charge).
 - If the companion also carries real bandages and so on, which one gets used is up to the game's AI.
 - Companions may also use them to treat you or other companions (they don't run out then either).
-
-## Makeshift laser turret
-
-Crafting menu: Weapons → Ranged (Electronics 5, 2 hours). Like the shoddy laser rifle, you learn it automatically or from electronics books.
-Materials: 1 shoddy laser rifle, 1 medium storage battery, 1 set of casters, 7 pipes, 2 tiny electric motors, 1 spring, 1 camera of any kind, 5 electronic scrap, 30 cable, soldering (30). Tools: fine screwdriver, wrench, hacksaw
-
-1. Use it (`a`) to unfold it where you stand (it becomes a one-tile vehicle).
-2. Interact with the vehicle on the turret's tile and set the turret's firing mode to **automatic**.
-3. It shoots nearby enemies automatically, using power.
-
-- To carry it, **fold** it from the vehicle menu and it turns back into an item (battery charge and damage are kept).
-- It runs on its built-in medium storage battery. **It is empty the first time you unfold it**, so charge it first.
-- It has casters, so you can push it around while unfolded (grab it with `G`).
-- To run it from the electric grid, build a "jumper cable connector" in a building with a grid (construction menu: Workshop), then connect it to the turret with a jumper cable. Disconnect the cable before folding it.
-- The targeting unit can be removed but not put back (nor installed on other vehicles). Without it, the turret can't fire automatically.
 
 ## Ankle warmers / wool ankle warmers
 
