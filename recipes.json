@@ -479,5 +479,25 @@
         ]
       ]
     ]
+  },
+  {
+    "//": "Cheap recipe (1 paper), because the tag is used up each time. 札は毎回なくなるので、紙1枚で作れるようにする。",
+    "//2": "Assisted-by: Claude:claude-opus-5-5",
+    "type": "recipe",
+    "result": "uz_unsorted_zone_tag",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "1 m",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "paper",
+          1
+        ]
+      ]
+    ]
   }
 ]

@@ -234,5 +234,34 @@
       "ALLOWS_MUZZLE",
       "OVERSIZE"
     ]
+  },
+  {
+    "//": "Unsorted zone tag. Paper, no weight, volume or price. Using it places tr_uz_unsorted_zone_tag on an adjacent tile; the item is used up. 未分類ゾーンの札。紙製で重さ・容量・値段は0。使うと隣のタイルに罠 tr_uz_unsorted_zone_tag を置く（アイテムはなくなる）。",
+    "//2": "Assisted-by: Claude:claude-opus-5-5",
+    "id": "uz_unsorted_zone_tag",
+    "type": "GENERIC",
+    "category": "tools",
+    "name": {
+      "str": "unsorted zone tag"
+    },
+    "description": "A paper tag for marking out a sorting area.  Use it to set it on a tile next to you, then step on it: the whole overmap tile you are on (24x24) becomes a Loot: Unsorted zone.  Once set, it can't be picked up again.",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "to_hit": -1,
+    "material": [
+      "paper"
+    ],
+    "symbol": "`",
+    "color": "yellow",
+    "looks_like": "paper",
+    "use_action": {
+      "type": "place_trap",
+      "trap": "tr_uz_unsorted_zone_tag",
+      "moves": 100,
+      "practice": 0,
+      "done_message": "You set the unsorted zone tag.  Step on it to mark this area."
+    }
   }
 ]

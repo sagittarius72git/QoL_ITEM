@@ -14,8 +14,8 @@ msgid "QoL Item"
 msgstr "QoL アイテム"
 
 #: modinfo.json
-msgid "A set of handy items: a rope ladder you can hang from a ledge, a homemade water dispenser that lets you auto-drink from the fluid grid, a makeshift bandage and disinfectant your companions can use any number of times, ankle warmers for mutated feet, and plague masks that fit mutated mouths."
-msgstr "便利なアイテムのセットです：段差の縁から垂らせる縄梯子、液体グリッドの水を自動飲料で飲めるようにする自作ウォーターサーバー、仲間が何度でも使える間に合せの包帯と消毒、変異した足でも履けるアンクルウォーマー、口が変異していても着けられるペストマスク。"
+msgid "A set of handy items: a rope ladder you can hang from a ledge, a homemade water dispenser that lets you auto-drink from the fluid grid, a makeshift bandage and disinfectant your companions can use any number of times, ankle warmers for mutated feet, plague masks that fit mutated mouths, and a paper tag that turns the overmap tile you are on into a Loot: Unsorted zone."
+msgstr "便利なアイテムのセットです：段差の縁から垂らせる縄梯子、液体グリッドの水を自動飲料で飲めるようにする自作ウォーターサーバー、仲間が何度でも使える間に合せの包帯と消毒、変異した足でも履けるアンクルウォーマー、口が変異していても着けられるペストマスク、いまいるマップマスを「仕分け：未分類」ゾーンにする紙の札。"
 
 msgid "Adds a craftable rope ladder.  Hang it down from a ledge or roof edge, or set it up against a wall from below, then climb one level up or down.  Pull it back up from above or take it down from below to carry it with you."
 msgstr "製作可能な縄梯子を追加する。段差や屋根の縁から垂らすか、下から壁際に掛けて、1階分を上り下りできる。上から引き上げるか下で片付ければ、また持ち運べる。"
@@ -286,3 +286,16 @@ msgstr "変異体ハーフペストマスク"
 
 msgid "A long leather beak with gas filters packed inside, strapped over the mouth and nose like the lower half of a plague doctor's mask.  It leaves the eyes bare.  The roomy beak fits over muzzles, beaks, mandibles and other mutated mouths, but it is bulkier than a normal gas mask.  Provides excellent protection from smoke and other contaminants.  It must be prepared before use.  If you want to protect yourself from plague, this is the best there is."
 msgstr "ガスフィルターを詰めた長い革のくちばしを、ペスト医師のマスクの下半分のように口と鼻に固定するもの。目は覆わない。ゆったりしたくちばしは、鼻面やくちばし、大顎など、変異した口にもかぶせられるが、普通のガスマスクよりかさばる。煙などの汚染物質からしっかり守ってくれる。使う前に準備が必要。疫病から身を守るならこれが一番だ。"
+
+msgid "unsorted zone tag"
+msgid_plural "unsorted zone tags"
+msgstr[0] "未分類ゾーンの札"
+
+msgid "A paper tag for marking out a sorting area.  Use it to set it on a tile next to you, then step on it: the whole overmap tile you are on (24x24) becomes a Loot: Unsorted zone.  Once set, it can't be picked up again."
+msgstr "仕分け場所を決めるための紙の札。使うと、となりのタイルに置ける。そこを踏むと、いまいるマップマス全体（24x24）が「仕分け：未分類」ゾーンになる。一度置くと拾い直せない。"
+
+msgid "You set the unsorted zone tag.  Step on it to mark this area."
+msgstr "未分類ゾーンの札を置いた。踏むとこの一帯がゾーンになる。"
+
+msgid "placed unsorted zone tag"
+msgstr "設置した未分類ゾーンの札"

@@ -1,0 +1,42 @@
+[
+  {
+    "//": "Placed tag. Stepping on it runs the map update below on the overmap tile of whoever stepped on it, then the trap is removed (map_regen action). avoidance 99: with 0 the game always lets you step around it (Character::avoid_trap), so it never fires. difficulty 99: cannot be disarmed (same as the vanilla microlab shifting hall), so disarming gives no free morale. looks_like paper = same sprite as paper. benign = no warning prompt, NPCs walk over it too. 置かれた札。踏んだ人のいるマップマスに下のマップ更新を実行し、罠は消える。回避0だと必ず避けてしまい発動しないので99。難易度99で解除できない（本編のmicrolab shifting hallと同じ。解除でやる気が得られないように）。画像は紙と同じ（looks_like）。benign なので確認が出ず、NPCも踏む。",
+    "//2": "Assisted-by: Claude:claude-opus-5-5",
+    "type": "trap",
+    "id": "tr_uz_unsorted_zone_tag",
+    "name": "placed unsorted zone tag",
+    "color": "yellow",
+    "symbol": "^",
+    "looks_like": "paper",
+    "visibility": 0,
+    "avoidance": 99,
+    "difficulty": 99,
+    "action": "map_regen",
+    "map_regen": "uz_unsorted_zone_omt",
+    "benign": true
+  },
+  {
+    "//": "Map update run by the tag: one Loot: Unsorted zone over the whole 24x24 overmap tile, owned by the player's faction. Only a zone is placed; terrain is not touched. 札が実行するマップ更新：24x24のマップマス全体に、プレイヤー勢力の「仕分け：未分類」ゾーンを1つ置く。地形は変えない。",
+    "//2": "Assisted-by: Claude:claude-opus-5-5",
+    "type": "mapgen",
+    "update_mapgen_id": "uz_unsorted_zone_omt",
+    "method": "json",
+    "object": {
+      "place_zones": [
+        {
+          "type": "LOOT_UNSORTED",
+          "faction": "your_followers",
+          "name": "Loot: Unsorted",
+          "x": [
+            0,
+            23
+          ],
+          "y": [
+            0,
+            23
+          ]
+        }
+      ]
+    }
+  }
+]
