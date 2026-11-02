@@ -244,7 +244,7 @@
     "name": {
       "str": "unsorted zone tag"
     },
-    "description": "A paper tag for marking out a sorting area.  Use it to set it on a tile next to you, then step on it: the whole overmap tile you are on (24x24) becomes a Loot: Unsorted zone.  If you set it in the wrong place, disarm it to pick it up again.",
+    "description": "A paper tag for marking out a sorting area.  Use it to set it on a tile next to you, then step on it: the whole overmap tile you are on (24x24) becomes a Loot: Unsorted zone.  Once set, it can't be picked up again.",
     "weight": "0 g",
     "volume": "0 ml",
     "price": "0 cent",

@@ -291,8 +291,8 @@ msgid "unsorted zone tag"
 msgid_plural "unsorted zone tags"
 msgstr[0] "未分類ゾーンの札"
 
-msgid "A paper tag for marking out a sorting area.  Use it to set it on a tile next to you, then step on it: the whole overmap tile you are on (24x24) becomes a Loot: Unsorted zone.  If you set it in the wrong place, disarm it to pick it up again."
-msgstr "仕分け場所を決めるための紙の札。使うと、となりのタイルに置ける。そこを踏むと、いまいるマップマス全体（24x24）が「仕分け：未分類」ゾーンになる。置き場所を間違えたら、解除すれば拾い直せる。"
+msgid "A paper tag for marking out a sorting area.  Use it to set it on a tile next to you, then step on it: the whole overmap tile you are on (24x24) becomes a Loot: Unsorted zone.  Once set, it can't be picked up again."
+msgstr "仕分け場所を決めるための紙の札。使うと、となりのタイルに置ける。そこを踏むと、いまいるマップマス全体（24x24）が「仕分け：未分類」ゾーンになる。一度置くと拾い直せない。"
 
 msgid "You set the unsorted zone tag.  Step on it to mark this area."
 msgstr "未分類ゾーンの札を置いた。踏むとこの一帯がゾーンになる。"

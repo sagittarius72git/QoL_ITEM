@@ -31,7 +31,7 @@ Lets you craft the game's own cardboard boxes under Other → Containers.
 
 ## Unsorted zone tag
 Crafting: Other → Tools (1 paper). Use it to set it on a tile next to you, then step on it: the whole overmap tile you are on (24x24) becomes a Loot: Unsorted zone.
-- The tag is used up. If you set it in the wrong place, disarm it to pick it up again.
+- The tag is used up. A set tag can't be picked up again (stepping on it marks the overmap tile it is on).
 - The zone shows up in the list after you walk a little (about 12 tiles). If you quit before that, no zone is made.
 - Using it twice on the same overmap tile makes two identical zones.
 
