@@ -1,0 +1,29 @@
+[
+  {
+    "type": "mod_tileset",
+    "//": "Worn graphics of the mutant plague masks for UnDeadPeople (32x32 body, one sprite for both sexes like its gas mask). Without this, UnDeadPeople shows the gas mask through looks_like. UnDeadPeople用の変異体ペストマスク装着時の重ね絵（32x32の体、ガスマスクと同じく男女共通1枚）。これが無いと looks_like でガスマスクの絵になる。",
+    "//2": "Assisted-by: Claude:claude-opus-5-5",
+    "compatibility": [
+      "UNDEAD_PEOPLE_BASE"
+    ],
+    "tiles-new": [
+      {
+        "file": "tiles/worn_overlays_udp.png",
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "tiles": [
+          {
+            "id": "overlay_worn_pm_mutant_plague_mask",
+            "fg": 0,
+            "rotates": false
+          },
+          {
+            "id": "overlay_worn_pm_mutant_plague_mask_half",
+            "fg": 1,
+            "rotates": false
+          }
+        ]
+      }
+    ]
+  }
+]
