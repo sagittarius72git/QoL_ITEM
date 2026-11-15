@@ -236,15 +236,16 @@
     ]
   },
   {
-    "//": "Unsorted zone tag. Paper, no weight, volume or price. Using it places tr_uz_unsorted_zone_tag on an adjacent tile; the item is used up. 未分類ゾーンの札。紙製で重さ・容量・値段は0。使うと隣のタイルに罠 tr_uz_unsorted_zone_tag を置く（アイテムはなくなる）。",
+    "//": "Unsorted zone tag. Paper, no weight, volume or price. Using it runs UZ_MARK_UNSORTED_ZONES (main.lua), which marks the overmap tile you are on and the eight around it. TOOL + DESTROY_ON_DECHARGE = used up when the Lua action returns 1 (same way as the rope ladder). 未分類ゾーンの札。紙製で重さ・容量・値段は0。使うと UZ_MARK_UNSORTED_ZONES（main.lua）が動き、いまいるマップマスと周り8マスをゾーンにする。TOOL + DESTROY_ON_DECHARGE で、Lua の処理が 1 を返すとなくなる（縄梯子と同じ方式）。",
     "//2": "Assisted-by: Claude:claude-opus-5-5",
+    "//3": "Assisted-by: Claude:claude-fable-5-2",
     "id": "uz_unsorted_zone_tag",
-    "type": "GENERIC",
+    "type": "TOOL",
     "category": "tools",
     "name": {
       "str": "unsorted zone tag"
     },
-    "description": "A paper tag for marking out a sorting area.  Use it to set it on a tile next to you, then step on it: the whole overmap tile you are on (24x24) becomes a Loot: Unsorted zone.  Once set, it can't be picked up again.",
+    "description": "A paper tag for marking out a sorting area.  Use it, and the overmap tile you are on and the eight around it (3x3 overmap tiles, 72x72) become Loot: Unsorted zones.  The tag is used up.",
     "weight": "0 g",
     "volume": "0 ml",
     "price": "0 cent",
@@ -256,12 +257,14 @@
     "symbol": "`",
     "color": "yellow",
     "looks_like": "paper",
-    "use_action": {
-      "type": "place_trap",
-      "trap": "tr_uz_unsorted_zone_tag",
-      "moves": 100,
-      "practice": 0,
-      "done_message": "You set the unsorted zone tag.  Step on it to mark this area."
-    }
+    "flags": [
+      "DESTROY_ON_DECHARGE"
+    ],
+    "use_action": [
+      {
+        "type": "UZ_MARK_UNSORTED_ZONES",
+        "menu_text": "Mark the area as unsorted"
+      }
+    ]
   }
 ]

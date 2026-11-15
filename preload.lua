@@ -3,6 +3,7 @@
   使用アクション・調べるアクション・定期処理の登録だけを置く。実装は main.lua 側。
 
   Assisted-by: Claude:claude-opus-5-5
+  Assisted-by: Claude:claude-fable-5-2
 ]]
 
 gdebug.log_info("QOL: preload.")
@@ -79,3 +80,14 @@ gapi.add_on_every_x_hook(TimeDuration.from_minutes(1), function()
     mod.refill()
   end
 end)
+
+-- 未分類ゾーンの札：使うと、いまいるマップマスと周り8マスを「仕分け：未分類」ゾーンにする
+-- (Unsorted zone tag: marks the overmap tile you are on and the eight around it.)
+game.iuse_functions["UZ_MARK_UNSORTED_ZONES"] = {
+  use = function(params)
+    if mod.mark_unsorted_zones then
+      return mod.mark_unsorted_zones(params)
+    end
+    return 0
+  end,
+}

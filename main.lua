@@ -1,16 +1,18 @@
 --[[
   QoL Item - main.lua
 
-  このMODのアイテムのうち、Luaを使うのは次の2つ。
-  (Of this mod's items, only these two use Lua.)
+  このMODのアイテムのうち、Luaを使うのは次の3つ。
+  (Of this mod's items, only these three use Lua.)
     1. 縄梯子（Rope Ladder）           … 「縁から垂らす」
     2. 自作ウォーターサーバー（Liquid Grid Water Dispenser） … 設置・補充・調べる
+    3. 未分類ゾーンの札（Unsorted Zone Tag） … 周り9マップマスをゾーンにする合図だけ
   （ほかのアイテムは JSON だけで動くので、ここには何もない）
   (The other items are JSON-only, so there is no Lua for them here.)
 
   それぞれ do ... end で囲み、ローカル変数が混ざらないようにしている。
 
   Assisted-by: Claude:claude-opus-5-5
+  Assisted-by: Claude:claude-fable-5-2
 ]]
 
 gdebug.log_info("QOL: main.")
@@ -1009,3 +1011,69 @@ mod.refill = function()
 end
 end
 
+----------------------------------------------------------------------
+-- 3. 未分類ゾーンの札
+----------------------------------------------------------------------
+do
+--[[
+  Unsorted Zone Tag
+
+  札を使うと、いまいるマップマスと周り8マス（3x3マップマス）を「仕分け：未分類」ゾーンにする。
+  (Using the tag turns the overmap tile you are on and the eight around it
+   into Loot: Unsorted zones.)
+
+  ゾーンを置く処理そのものは JSON（unsorted_zone_tag.json）にある。
+  (The zones themselves are placed by JSON, in unsorted_zone_tag.json.)
+    * マップ更新 uz_unsorted_zone_omt … マップマス1つにゾーンを1つ置く
+    * ミッション uz_unsorted_zone_3x3 … 「失敗時の効果」で、そのマップ更新を
+      プレイヤーの周り9マップマスに実行する
+
+  Lua にはゾーンを作る API が無く、JSON だけではアイテムからその効果を呼べない。
+  そこで Lua は「ミッションを作って、すぐ失敗させる」ことだけを受け持つ。
+  (Lua has no zone API, and JSON alone cannot fire those effects from an item,
+   so Lua only creates the mission and fails it at once.)
+    * 誰にも割り当てないので、ミッション一覧にも日記にも出ない。
+      (Never assigned, so it shows in neither the mission list nor the diary.)
+    * 使うたびに、失敗済みミッションの記録がセーブデータに1件残る。
+      (Each use leaves one failed-mission record in the save.)
+
+  Assisted-by: Claude:claude-fable-5-2
+]]
+
+local mod = game.mod_runtime[game.current_mod]
+local T = locale.gettext
+
+-- unsorted_zone_tag.json のミッションID (mission id in unsorted_zone_tag.json)
+local MISSION = "uz_unsorted_zone_3x3"
+-- 使うのにかかる行動コスト (move cost of using the tag)
+local MOVE_COST = 100
+
+-- 戻り値は消費数。1 で札がなくなる（DESTROY_ON_DECHARGE）、0 なら何も起きない
+-- (Returns charges used: 1 uses up the tag, 0 does nothing.)
+mod.mark_unsorted_zones = function(params)
+  local u = params.user
+  if not u then
+    return 0
+  end
+
+  local ok, err = pcall(function()
+    -- MissionTypeIdRaw は mission_type_id の Lua 上の名前
+    -- (MissionTypeIdRaw is the Lua name of mission_type_id.)
+    -- CharacterId.new() は「依頼人なし」(CharacterId.new() = no mission giver)
+    local mission = Mission.reserve_new(MissionTypeIdRaw.new(MISSION), CharacterId.new())
+    -- 失敗させると JSON の "fail" の効果が実行される
+    -- (Failing it runs the "fail" effects from JSON.)
+    mission:fail()
+  end)
+  if not ok then
+    -- 失敗したら札は消費しない (on error the tag is not used up)
+    gdebug.log_info("UZ: mark_unsorted_zones failed: " .. tostring(err))
+    gapi.add_msg(T("The unsorted zone tag does nothing."))
+    return 0
+  end
+
+  u:mod_moves(-MOVE_COST)
+  gapi.add_msg(T("You put up the unsorted zone tag.  This overmap tile and the eight around it will show up as Loot: Unsorted zones once you walk a little."))
+  return 1
+end
+end

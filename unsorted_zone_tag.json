@@ -1,6 +1,6 @@
 [
   {
-    "//": "Placed tag. Stepping on it runs the map update below on the overmap tile of whoever stepped on it, then the trap is removed (map_regen action). avoidance 99: with 0 the game always lets you step around it (Character::avoid_trap), so it never fires. difficulty 99: cannot be disarmed (same as the vanilla microlab shifting hall), so disarming gives no free morale. looks_like paper = same sprite as paper. benign = no warning prompt, NPCs walk over it too. 置かれた札。踏んだ人のいるマップマスに下のマップ更新を実行し、罠は消える。回避0だと必ず避けてしまい発動しないので99。難易度99で解除できない（本編のmicrolab shifting hallと同じ。解除でやる気が得られないように）。画像は紙と同じ（looks_like）。benign なので確認が出ず、NPCも踏む。",
+    "//": "Legacy: tags placed by older versions of this mod (the tag used to be set on a tile and stepped on). Kept so those saves still load and the placed tags still work; they mark only the overmap tile of whoever steps on them. New tags no longer place this trap. avoidance 99: with 0 the game always lets you step around it (Character::avoid_trap), so it never fires. difficulty 99: cannot be disarmed. 旧版の名残：以前の版で置かれた札（置いて踏む方式だった）。そのセーブを読み込めて、置いてある札も動くように残している。踏んだ人のいるマップマス1つだけをゾーンにする。新しい札はこの罠を置かない。回避0だと必ず避けてしまい発動しないので99。難易度99で解除できない。",
     "//2": "Assisted-by: Claude:claude-opus-5-5",
     "type": "trap",
     "id": "tr_uz_unsorted_zone_tag",
@@ -16,7 +16,7 @@
     "benign": true
   },
   {
-    "//": "Map update run by the tag: one Loot: Unsorted zone over the whole 24x24 overmap tile, owned by the player's faction. Only a zone is placed; terrain is not touched. 札が実行するマップ更新：24x24のマップマス全体に、プレイヤー勢力の「仕分け：未分類」ゾーンを1つ置く。地形は変えない。",
+    "//": "Map update run by the tag, once per overmap tile: one Loot: Unsorted zone over the whole 24x24 overmap tile, owned by the player's faction. Only a zone is placed; terrain is not touched. place_zones cannot reach outside its own overmap tile, so the 3x3 area is made by running this nine times (see the mission below). 札が実行するマップ更新（マップマス1つにつき1回）：24x24のマップマス全体に、プレイヤー勢力の「仕分け：未分類」ゾーンを1つ置く。地形は変えない。place_zones は自分のマップマスの外に届かないので、3x3の範囲は下のミッションでこれを9回実行して作る。",
     "//2": "Assisted-by: Claude:claude-opus-5-5",
     "type": "mapgen",
     "update_mapgen_id": "uz_unsorted_zone_omt",
@@ -35,6 +35,68 @@
             0,
             23
           ]
+        }
+      ]
+    }
+  },
+  {
+    "//": "Not a real mission: it only carries the effect list below. main.lua creates it without giving it to anyone and fails it at once, which runs the fail effects: the map update above on the player's overmap tile and the eight around it (offset_x / offset_y, in overmap tiles). It is never assigned, so it never shows in the mission list. No origins, so no NPC ever offers it. 本物のミッションではなく、下の効果リストを運ぶだけのもの。main.lua が誰にも渡さずに作ってすぐ失敗させると、失敗時の効果として、プレイヤーのいるマップマスと周り8マスに上のマップ更新が実行される（offset_x / offset_y はマップマス単位）。割り当てないのでミッション一覧には出ない。origins が無いので NPC が出すこともない。",
+    "//2": "Assisted-by: Claude:claude-fable-5-2",
+    "type": "mission_definition",
+    "id": "uz_unsorted_zone_3x3",
+    "name": {
+      "str": "Mark unsorted zones"
+    },
+    "goal": "MGOAL_NULL",
+    "difficulty": 0,
+    "value": 0,
+    "has_generic_rewards": false,
+    "fail": {
+      "effect": [
+        {
+          "mapgen_update": "uz_unsorted_zone_omt",
+          "offset_x": -1,
+          "offset_y": -1
+        },
+        {
+          "mapgen_update": "uz_unsorted_zone_omt",
+          "offset_x": 0,
+          "offset_y": -1
+        },
+        {
+          "mapgen_update": "uz_unsorted_zone_omt",
+          "offset_x": 1,
+          "offset_y": -1
+        },
+        {
+          "mapgen_update": "uz_unsorted_zone_omt",
+          "offset_x": -1,
+          "offset_y": 0
+        },
+        {
+          "mapgen_update": "uz_unsorted_zone_omt",
+          "offset_x": 0,
+          "offset_y": 0
+        },
+        {
+          "mapgen_update": "uz_unsorted_zone_omt",
+          "offset_x": 1,
+          "offset_y": 0
+        },
+        {
+          "mapgen_update": "uz_unsorted_zone_omt",
+          "offset_x": -1,
+          "offset_y": 1
+        },
+        {
+          "mapgen_update": "uz_unsorted_zone_omt",
+          "offset_x": 0,
+          "offset_y": 1
+        },
+        {
+          "mapgen_update": "uz_unsorted_zone_omt",
+          "offset_x": 1,
+          "offset_y": 1
         }
       ]
     }
