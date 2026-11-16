@@ -30,12 +30,14 @@ Crafting: Armor → Head. Same stats as a gas mask (encumbrance 35), and you can
 Lets you craft the game's own cardboard boxes under Other → Containers.
 
 ## Unsorted zone tag
-Crafting: Other → Tools (1 paper). Use it to set it on a tile next to you, then step on it: the whole overmap tile you are on (24x24) becomes a Loot: Unsorted zone.
-- The tag is used up. A set tag can't be picked up again (stepping on it marks the overmap tile it is on).
-- The zone shows up in the list after you walk a little (about 12 tiles). If you quit before that, no zone is made.
-- Using it twice on the same overmap tile makes two identical zones.
+Crafting: Other → Tools (1 paper). Use it (`a`), and the overmap tile you are on and the eight around it (3x3 overmap tiles, 72x72) become Loot: Unsorted zones.
+- The tag is used up.
+- The zones show up in the list after you walk a little (about 12 tiles). If you quit before that, no zones are made.
+- Nine zones are made, one per overmap tile. Using it twice in the same place makes them twice.
+- Each use leaves one small hidden record in the save file.
 
 ## Settings
 Change them in `main.lua`: `mod.cfg` (rope ladder) and `CFG` (water dispenser).
 
 <!-- Assisted-by: Claude:claude-opus-5-5 -->
+<!-- Assisted-by: Claude:claude-fable-5-2 -->

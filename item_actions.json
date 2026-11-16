@@ -26,5 +26,12 @@
     "name": {
       "str": "Set up the water dispenser"
     }
+  },
+  {
+    "type": "item_action",
+    "id": "UZ_MARK_UNSORTED_ZONES",
+    "name": {
+      "str": "Mark the area as unsorted"
+    }
   }
 ]
